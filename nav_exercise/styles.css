@@ -1,0 +1,88 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Asap|Shadows+Into+Light");
+
+body {
+    height: 100%;
+    margin: 0 auto;
+    font-family: "Asap", sans-serif;
+    line-height: 2em;
+    background: url(images/hack-1.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+
+/****************************
+    navigation styles
+*/
+
+
+nav {
+    background-color: #89B0AE;
+    text-align: center;
+
+}
+
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav li {
+    text-decoration: none;
+    display: inline;
+
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 70px;
+    color: brown;
+
+}
+
+nav a:hover {
+    background-color: #FAF9F9;
+    opacity: .7;
+    color: black;
+}
+
+/***********************
+    end nav
+*/
+
+h1 {
+    margin: 30px;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+aside {
+    width: 29%;
+    color: #fff;
+    margin: 0 45px;
+    float: left;
+
+}
+
+article {
+    width: 32%;
+    float: right;
+    color: #fff;
+    margin: 0 45px;
+
+}
