@@ -47,9 +47,8 @@ nav ul {
 nav li {
     text-decoration: none;
     display: inline;
-
-
 }
+
 
 nav a {
     display: inline-block;
@@ -61,10 +60,11 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #FAF9F9;
-    opacity: .7;
+
+    background-color: rgba(247, 111, 188, .09);
     color: black;
 }
+
 
 /***********************
     end nav
@@ -126,13 +126,10 @@ article {
 
 }
 
-/*
-section {
-    clear: both;
-    height: 138px;
-    border: 1px solid #3D4453;
-}
+/***********************
+    start footer
 */
+
 
 footer {
     position: fixed;
@@ -143,6 +140,49 @@ footer {
     background: #3D4453;
 }
 
+footer ul {
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer li {
+    text-decoration: none;
+    display: inline;
+
+
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 45px;
+    padding: 0px 70px;
+    color: #fff;
+
+}
+
+footer.copyright p {
+    font-size: 10px;
+    color: #fff;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding-left: 20px;
+
+}
+
+
+
+/***********************
+    end footer
+*/
+
 
 .responsive-image {
     width: 1200px;
@@ -151,52 +191,28 @@ footer {
     max-height: 400px;
 
 }
-article.rightBox {
-    
+
+article.rightBox img {
+
+    width: 100%;
+}
+
+article.leftBox img {
+
+    width: 100%;
+}
+
+article.leftBox {
+
     width: 70%;
     float: left;
     height: 138px;
-    border: solid 1px #3D4453;
+
 }
-article.leftBox {
-    
+
+article.rightBox {
+    margin-bottom: 120px;
     width: 28.9%;
     float: right;
     height: 138px;
-    border: solid 1px #3D4453;
 }
-article.leftBox img {
-    
-   width: 100%;
-}
-
-/*
-aside.leftBox {
-    width: 29%;
-    float: left;
-    height: 138px;
-    background-color: aqua;
-     padding-top: 6em;
-   
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
