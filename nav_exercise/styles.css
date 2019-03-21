@@ -102,6 +102,7 @@ aside {
     overflow: scroll;
 }
 
+
 aside h1 {
     /*    background-color: aqua;*/
     margin-bottom: 10px;
@@ -122,9 +123,8 @@ article {
     height: 400px;
     margin-bottom: 10px;
     display: flex;
-
-
 }
+
 
 /***********************
     start footer
@@ -207,8 +207,8 @@ article.leftBox {
     width: 70%;
     float: left;
     height: 138px;
-
 }
+
 
 article.rightBox {
     margin-bottom: 120px;
@@ -216,3 +216,4 @@ article.rightBox {
     float: right;
     height: 138px;
 }
+
