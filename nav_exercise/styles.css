@@ -216,12 +216,11 @@ article.rightBox {
     float: right;
     height: 138px;
 }
-ul.a  {
+#steps {
     text-align:justify;
-    list-style: circle;
-    color: aqua;
-   
+    padding: 4em;
 }
+ 
 
 
 
