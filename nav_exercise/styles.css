@@ -67,7 +67,7 @@ img {
 .main-nav a:hover {
 
     background-color: rgba(247, 111, 188, .2);
-    color: black;
+    color: #3D4453
 }
 
 /*top container*/
@@ -97,7 +97,7 @@ img {
     margin-top: -30px;
     margin-bottom: 1.3rem;
     justify-content: center;
-    color: #ffffff;
+    color:transparent;
 
 }
 
