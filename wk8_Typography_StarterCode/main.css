@@ -61,9 +61,21 @@ small, .text_small {font-size: 0.8em;}
 
 @media only screen and (min-width:1000px){
     
-    section {
+ 
+}
+
+
+
+
+
+
+
+
+/*
+
+   section {
         
         column-count: 2;
     }
-}
+*/
 

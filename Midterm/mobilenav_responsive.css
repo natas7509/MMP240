@@ -49,7 +49,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     right: 0;
     top: 0;
     /*If navigation button is off, fix padding here after styling text*/
-    /*padding: 17.25px 17px;*/
+    padding: 17.25px 17px;
     
   }
     
@@ -58,7 +58,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     height: auto;
     width: auto;
     /*If navigation button is off, fix padding here after styling text*/
-     /*padding: 17.25px 17px;*/
+     padding: 17.25px 17px;
     }
   .topnav.responsive a {
     float: none;
