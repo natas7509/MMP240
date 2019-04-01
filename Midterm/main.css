@@ -30,11 +30,11 @@ body {
     color: #5d4d55;
     
 }
-.img {
+.showcase {
     background: url(images/skate-1.jpg);
     background-size: cover;
     background-position: center;
-    height: auto;
+/*    height:100%;*/
 }
 
 
