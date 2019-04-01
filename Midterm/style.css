@@ -1,11 +1,11 @@
 .site {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(2fr 1fr 1fr 1fr);
     grid-template-areas:
-        "title"
-        
-        "masthead"
+         "showcase"
+        "top-box"
+       
         "main"
         "sidebar"
         "footer"
@@ -13,16 +13,16 @@
 
 }
 
-.masthead {
+.showcase {
 
     grid-area: masthead;
 
 
 }
 
-.page-title {
+.top-box {
 
-    grid-area: title;
+    grid-area: top-box;
 
 }
 
@@ -45,7 +45,7 @@
     .site {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas:
-            "title title title"
+            "top-box top-box top-box"
             "main masthead masthead"
             "main sidebar sidebar"
             "footer footer footer";
@@ -58,11 +58,12 @@
 
 
     .site {
-        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "title title title title"
-            "main masthead sidebar footer"
-            "main masthead sidebar footer";
+            "top-box top-box top-box top-box"
+            "main main main main"
+            "masthead masthead sidebar sidebar"
+            "footer footer footer footer";
           
 
     }
