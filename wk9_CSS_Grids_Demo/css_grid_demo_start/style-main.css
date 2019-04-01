@@ -182,7 +182,8 @@ General styling
 }
 
 .masthead {
-    background-color: #b46ae3;
+/*    background-color: #b46ae3;*/
+    background-color: #888;
 }
 
 .page-title {
