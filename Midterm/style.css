@@ -1,11 +1,10 @@
 .site {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2fr 1fr 1fr 1fr);
+/*    grid-template-rows:;*/
     grid-template-areas:
-         "showcase"
+        "showcase"
         "top-box"
-       
         "main"
         "sidebar"
         "footer"
@@ -15,7 +14,7 @@
 
 .showcase {
 
-    grid-area: masthead;
+    grid-area: showcase;
 
 
 }
@@ -46,7 +45,7 @@
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas:
             "top-box top-box top-box"
-            "main masthead masthead"
+            "main showcase showcase"
             "main sidebar sidebar"
             "footer footer footer";
 
@@ -62,7 +61,7 @@
         grid-template-areas:
             "top-box top-box top-box top-box"
             "main main main main"
-            "masthead masthead sidebar sidebar"
+            "showcase showcase sidebar sidebar"
             "footer footer footer footer";
           
 
