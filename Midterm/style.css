@@ -10,6 +10,8 @@ p {
   margin-bottom: 1.5em;
 }
 
+
+
 .site {
   display: grid;
   grid-gap: 1em;
@@ -17,6 +19,7 @@ p {
   grid-template-columns: 1fr;
   /*    grid-template-rows:;*/
   grid-template-areas:
+    "topnav"
     "showcase"
     "top-box"
     "main"
@@ -24,6 +27,9 @@ p {
     "footer";
 }
 
+
+
+.topnav
 .showcase,
 .top-box,
 .main-content,
@@ -31,6 +37,43 @@ p {
 .footer-content {
   padding: 1em;
 }
+
+.topnav {
+        grid-area: topnav;   
+  overflow: hidden;
+}
+ 
+
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: green;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.topnav a:hover {
+  background-color: #D6E5E3;
+  color: black;
+}
+
+.active {
+  background-color: #fde8e9;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+        
+
+
+
 
 .showcase {
   grid-area: showcase;
@@ -41,6 +84,7 @@ p {
 .top-box {
   grid-area: top-box;
   background-color: #bc9ec1;
+background: url(images/skate-1.jpg);
 }
 
 .main-content {
@@ -67,6 +111,7 @@ p {
 
         grid-template-columns:  1fr 1fr;
   }
+    
 
   .showcase {
     grid-column: 1/3;
@@ -92,66 +137,6 @@ p {
   }
 }
 
-/*
-@media only screen and (min-width: 1200px) {
-  .site {
-    grid-template-columns: 1fr 1fr;
-  }
-    
-    .showcase {
-        grid-column: 1/3;
-        grid-row: 1/2;
-    }
-    .top-box {
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-        .showcase {
-            grid-column: 1/4;
-            grid-row: 1/2;
-           
-        }
-        .main-content {
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        
-        .sidebar {
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-    .footer {
-        grid-column: 1/3;
-    }
-    
-}
-*/
 
-/*
-    @media only screen and (min-width: 50em){
-        .site {
-            grid-template-columns: 15em auto 15em;
-        }
-        .top-box {
-            grid-column: 1/2;
-            grid-row: 2/4
-        }
-        .showcase {
-            grid-column: 1/4;
-            grid-row: 1/2
-           
-        }
-        .main-content {
-            grid-column: 2/3
-        }
-        
-        .sidebar {
-            grid-column: 3/4;
-            grid-row: 2/4;
-        }
-      
-        .footer {
-            grid-column: 1/4;
-        }
         
 */
