@@ -1,0 +1,87 @@
+
+/* font-family: 'Raleway', sans-serif; */ 
+
+:root {
+    --primary-opacity: rgba(117, 219, 205, .70);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.4s:
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+     line-height: 1.4;
+     
+     
+
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3em;
+}
+
+.showcase {
+    background-color: var(--primary-opacity);
+    color: #fff;
+    height: 100vh;
+    position: relative;
+}
+
+.showcase:before {
+    content:'';
+    background: url('../images/skate-1.jpg') no-repeat center center/cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;;
+    
+}
+
+.showcase h1 {
+
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif; 
+    
+}
+
+.showcase p {
+    font-size: 1.3em;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-opacity);
+    color: #fff;
+    padding: 0.75em 1.5em;
+    margin-top: 1em;
+    text-decoration: none;
+    transition: opacity 1s ease-in;
+}
+.btn:hover {
+
+    opacity: 0.4;
+    
+    
+    
+
+}
