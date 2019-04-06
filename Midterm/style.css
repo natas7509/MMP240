@@ -1,22 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700");
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,600');
 
 
 
 body {
-    font-family: "Muli", sans-serif;
-    margin: 1em;
+
+    font-family: 'Raleway', sans-serif;
+    margin: 0em;
     line-height: 1.5;
 }
 
+
 p {
     margin-bottom: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 
 
 .site {
     display: grid;
-    grid-gap: 1em;
+    /*    grid-gap: 1em;*/
 
     grid-template-columns: 1fr;
     /*    grid-template-rows:;*/
@@ -25,15 +29,19 @@ p {
         "showcase"
         "top-box"
         "main"
+        "sale2"
         "sidebar"
+        "sale"
         "footer";
 }
 
-
+.sale,
+.sale2,
 .showcase,
 .top-box,
 .main-content,
 .sidebar,
+.sale,
 .footer-content {
     padding: 1em;
 
@@ -57,13 +65,13 @@ h3 {
     grid-area: showcase;
     background-color: #75DBCD;
     color: #fff;
+
 }
 
 .top-box {
     grid-area: top-box;
-    /*    background-color: #D6E5E3;*/
-    background: url(images/skate-1.jpg) no-repeat center 30%/cover;
-     height: 50vh;
+    background: url(images/skate-1.jpg) no-repeat center /cover;
+    height: 50vh;
     text-align: right;
     color: #fff;
 
@@ -76,10 +84,19 @@ h3 {
     background-color: #fde8e9;
 
 }
+.sale2 {
+    grid-area: sale2;
+    background-color: rgba(125, 119, 205, 1);
+}
 
 .sidebar {
     grid-area: sidebar;
     background-color: #99B2DD;
+}
+
+.sale {
+    grid-area: sale;
+    background-color: #fff;
 }
 
 .footer-content {
@@ -96,67 +113,99 @@ h3 {
 @media only screen and (min-width: 600px) {
     .site {
         display: grid;
-        grid-template-columns: 15em auto;
-
+        grid-template-columns: auto 15em;
+        padding: 0;
+        margin: 1em;
     }
 
     .topnav {
-        grid-column: 1/3
-    }
+        grid-column: 1/3;
 
-    .showcase {
-        grid-column: 1/2;
-        grid-row: 2/4;
     }
-
     .top-box {
-        grid-column: 2/3;
-        grid-row: 2/4;
+        grid-column: 1/2;
+        height: 70vh;
     }
 
     .main-content {
+
         grid-column: 2/3;
+        grid-row: 2/4;
+    }
+
+    .sale2 {
+        grid-column: 1/3;
+        grid-row: 4/5;
+        
     }
 
     .sidebar {
         grid-column: 1/2;
-        grid-row: 4/5;
+        grid-row: 5/6;
     }
-
-    .footer-content {
-        grid-column: 1/3
-    }
-
-
-}
-
-/*end-of-600px-and-up*/
-
-
-
-@media only screen and (min-width: 1200px) {
-    .site {
-        display: grid;
-        grid-template-columns: 15em auto 15em;
-
-    }
-
-    .topnav {
-        grid-column: 1/4
- 
-    }
-
-    .top-box {
+     .sale {
         grid-column: 2/3;
-        background: url(images/skate-1.jpg) no-repeat center center cover;
-        height: 80vh;
+        grid-row: 5/6;
+       
     }
-     .sidebar {
-        grid-column: 3/4;
-        grid-row: 2/4;
-    }
-     .footer-content {
-        grid-column: 1/4
+    .footer-content {
+        grid-column: 1/3;
+        
     }
 
 
+
+    /*end-of-600px-and-up*/
+
+
+
+    @media only screen and (min-width: 1200px) {
+        .site {
+            display: grid;
+            grid-template-columns: 15em auto 15em;
+            padding: 0;
+
+        }
+
+        .topnav {
+            grid-column: 1/4
+        }
+
+        .top-box {
+            grid-column: 2/3;
+            background: url(images/skate-1.jpg) no-repeat center center cover;
+            height: 100vh;
+
+        }
+
+        .main-content {
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+        }
+
+        .showcase {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .sale2 {
+            grid-column: 1/2;
+            grid-row: 3/5;
+
+        }
+
+        .sidebar {
+            grid-column: 2/3;
+            grid-row: 3/5;
+
+        }
+
+        .sale {
+            grid-column: 3/4;
+            grid-row: 3/5;
+        }
+
+        .footer-content {
+            grid-column: 1/4
+        }
