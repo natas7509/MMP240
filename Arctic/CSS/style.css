@@ -220,8 +220,7 @@ h4 {
             grid-template-areas:
                 "showcase showcase"
                 "main-content insta";
-               
-
+         
         }
 
         .showcase {
