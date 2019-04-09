@@ -1,12 +1,12 @@
 /* Opacity Colors*/
 :root {
-    --showcase-color: rgba(93, 77, 85, 0.75);
-    --overlay-color: rgba(24, 39, 51, 0.85);
+    --showcase-color: rgba(0, 0, 10, .75);
+    --overlay-color: rgba(0, 0, 10, .85);
     --insta-color: rgba(253, 232, 233, 0.50);
     --merch-color: rgba(253, 232, 233, 0.50);
     --main-content: rgba(249, 245, 255, 0.50);
-    --news-color:
-        --menu-speed: 0.75s;
+    --footer-color: rgba(0, 0, 10, .85);
+    --menu-speed: 0.75s;
 }
 
 * {
@@ -18,6 +18,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    font-size: 1em;
 }
 
 .container {
@@ -31,16 +32,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
-    padding: 1em;
-}
+h4 {}
 
-/* .showcase {
-    background: var(--primary-color);
-    color: #fff;
-    height: 100vh;
-    position: relative;
-  } */
 
 .showcase:before {
     content: '';
@@ -63,7 +56,7 @@ h4 {
 }
 
 .showcase h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -75,8 +68,8 @@ h4 {
     display: inline-block;
     text-align: center;
     border: none;
-    background: var(--merch-color);
-    padding: .5em;
+    background: black;
+    padding: .25em;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
     width: 35%;
@@ -90,11 +83,12 @@ h4 {
 .merch ul li {
     display: inline-block;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 1em;
-    opacity: 1;
+
+    margin: 1em;
+
 }
 
 .merch ul {
@@ -106,7 +100,7 @@ h4 {
 .footer-content ul li a {
     /*    display: inline;*/
     border: none;
-    color: black;
+    color: var(--footer-color);
     text-decoration: none;
     color: #fff;
     text-align: center;
@@ -118,12 +112,14 @@ h4 {
     flex-direction: column;
     padding: 1em;
 
+
 }
 
 .footer-content p {
     text-align: center;
     color: #fff;
     font-size: 12px;
+    margin-bottom: 2em;
 }
 
 
@@ -159,7 +155,7 @@ h4 {
 
 .showcase {
     grid-area: showcase;
-    background: var(--showcase-color);
+    background: var(--footer-color);
     color: #fff;
     height: 100vh;
     position: relative;
@@ -169,7 +165,9 @@ h4 {
     grid-area: main-content;
     background-color: var(--main-content);
     text-align: center;
-    padding: 0 3em;
+    padding: 3em;
+    /* margin: 0 2em; */
+   
 
 
 
@@ -188,133 +186,118 @@ h4 {
     grid-area: insta;
     background: url('../images/insta-1.jpg')no-repeat center center/cover;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     align-items: center;
 }
 
 .merch {
     grid-area: merch;
-
-
-
 }
 
 
 .footer-content {
     grid-area: footer-content;
-    background-color: var(--showcase-color);
+    background-color: var(--footer-color);
+
+}
 
 
 
-    /*_____________________________________
+/*_____________________________________
     600px and up__________________________*/
 
 
-    @media only screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
 
-        .site {
-            display: grid;
-            grid-row-gap: 1em;
-            grid-template-columns: 15em auto;
-            grid-template-areas:
-                "showcase showcase"
-                "main-content insta";
-         
-        }
+    .site {
+        display: grid;
+        margin: 0;
+        /* grid-row-gap: 1em; */
+        grid-template-columns: 30em auto;
+        grid-template-areas:
+            "showcase showcase"
+            "main-content insta "
+            "merch news"
+            "footer-content footer-content";
+    }
 
-        .showcase {
-            grid-area: showcase;
-            background: var(--showcase-color);
-            color: #fff;
-            height: 100vh;
-            position: relative;
-        }
 
-        .insta {
-            grid-area: insta;
-            background: url('../images/insta-1.jpg')no-repeat center center/cover;
-            text-align: center;
-            width: 100vw;
-            height: 20vh;
-            align-items: center;
-        }
+    .showcase {
+        grid-area: showcase;
+        background: var(--showcase-color);
+        color: #fff;
+        height: 100vh;
+        position: relative;
+    }
+
+    .main-content {
+        grid-area: main-content;
+        background-color: var(--main-content);
+        text-align: center;
+        padding: 0 3em;
 
 
 
     }
 
-    /*
-        .showcase:before {
-            content: '';
-            background: url('../images/showcase-1.jpg')no-repeat center center/cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+    .news {
+        grid-area: news;
+        background-color: var(--main-content);
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        /* border: #fff solid 2px; */
 
-        }
+    }
 
-        .showcase .showcase-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100%;
-        }
+    .insta {
+        grid-area: insta;
+        background: url('../images/insta-1.jpg')no-repeat center center/cover;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        /* border: #fff solid 2px; */
+    }
 
-        .showcase {
-            grid-column: 1/3;
-            background: var(--showcase-color);
-            color: #fff;
-            height: 100vh;
-            position: relative;
+    .merch {
+        grid-area: merch;
+        /* border: #fff solid 2px; */
+        background-color: var(--main-content);
+    }
 
-        }
-
-
-
-
-        .main-content {
-            grid-column: 1/2;
-
-
-
-        }
-
-        .news {
-            grid-column: 2/3;
-            grid-row: 2/3;
-
-
-
-        }
-
-        .insta {
-            grid-column: 2/3;
-            grid-row: 3/4;
-
-        }
-
-        .merch {
-            grid-row: 3/4;
-            color: #fff;
-
-        }
-
-        .footer-content {
-            grid-column: 1/3;
-            margin: 0;
-
-
-        }
-
-
-
+    .footer-content {
+        grid-area: footer-content;
+        background-color: var(--footer-color);
 
 
     }
-*/
+
+    .footer-content ul li a {
+        font-size: 
+        display: inline-block;
+        border: none;
+        color: var(--footer-color);
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+
+    }
+
+    
+    .footer-content ul {
+        display: grid;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+
+
+
+
+}
+
+/* ---------------end-of-600px--------------------------- */
