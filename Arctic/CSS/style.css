@@ -1,7 +1,9 @@
+/*Photo by rawpixel.com from Pexels*/
+
 /* Opacity Colors*/
 :root {
-    --showcase-color: rgba(0, 0, 10, .75);
-    --overlay-color: rgba(0, 0, 10, .85);
+    /* --showcase-color: rgba(0, 0, 10, .75); */
+    --overlay-color: rgba(0, 0, 10, .35);
     --insta-color: rgba(253, 232, 233, 0.50);
     --merch-color: rgba(253, 232, 233, 0.50);
     --main-content: rgba(249, 245, 255, 0.50);
@@ -16,28 +18,42 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     line-height: 1.6;
     font-size: 1em;
+    color: #B0A08E;
+    
+
 }
 
 .container {
     max-width: 960px;
     margin: auto;
     overflow: hidden;
-
-
 }
 
 h1,
 h2,
 h3,
-h4 {}
+h4,
+h5,
+h6 {
+    clear: both;
+    color: #B0A08E;
+    line-height: 1.7em;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2.5px;
+}
+
+p {
+    margin: 1.5em;
+}
+
 
 
 .showcase:before {
     content: '';
-    background: url('../images/showcase-1.jpg')no-repeat center center/cover;
+    background: url('../images/showcase-1.jpg') center center/cover;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,31 +69,35 @@ h4 {}
     justify-content: center;
     text-align: center;
     height: 100%;
+
 }
 
 .showcase h1 {
-    font-size: 3rem;
-    font-family: 'Raleway', sans-serif;
+    font-size: 63px;
+
+
 }
 
-.showcase p {
-    font-size: 1.3rem;
-}
 
 .merch ul li a {
     display: inline-block;
     text-align: center;
     border: none;
-    background: black;
+    background: #B0A08E;
     padding: .25em;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
     width: 35%;
-    color: #fff;
+    color: black;
+    letter-spacing: 1.5px;
+    border-radius: 2px;
+}
 
-
-
-
+.merch ul li a:hover {
+    background-color: transparent;
+    border: #B0A08E solid 1px;
+    transition: 1s;
+    color: #B0A08E;
 }
 
 .merch ul li {
@@ -86,40 +106,48 @@ h4 {}
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
+    font-size: 1em;
     margin: 1em;
+   
 
 }
 
 .merch ul {
     width: 100%;
+
 }
 
 
+  
+  
 
 .footer-content ul li a {
-    /*    display: inline;*/
+    display: inline-block;
     border: none;
     color: var(--footer-color);
     text-decoration: none;
     color: #fff;
     text-align: center;
-
+    letter-spacing: 2.5px;
+    
 }
 
 .footer-content ul li {
-    display: flex;
+    display: grid;
     flex-direction: column;
     padding: 1em;
 
-
 }
+
+
 
 .footer-content p {
     text-align: center;
     color: #fff;
-    font-size: 12px;
+    font-size: .5em;
     margin-bottom: 2em;
+    letter-spacing: 2.5px;
+
 }
 
 
@@ -127,12 +155,13 @@ h4 {}
 .btn {
     display: inline-block;
     border: none;
-    background: var(--showcase-color);
+    background: black;
     color: #fff;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
+
 }
 
 .btn:hover {
@@ -141,7 +170,7 @@ h4 {}
 
 .site {
     display: grid;
-    grid-row-gap: 1em;
+    /* grid-row-gap: 1em; */
     grid-template-columns: 1fr;
     grid-template-areas:
         "showcase"
@@ -155,32 +184,32 @@ h4 {}
 
 .showcase {
     grid-area: showcase;
-    background: var(--footer-color);
     color: #fff;
     height: 100vh;
     position: relative;
+    background: var(--footer-color);
 }
 
 .main-content {
     grid-area: main-content;
-    background-color: var(--main-content);
+    background: var(--footer-color);
     text-align: center;
     padding: 3em;
     /* margin: 0 2em; */
-   
+
 
 
 
 }
 
-.news {
+/* .news {
     grid-area: news;
-    background-color: var(--news-color);
     text-align: center;
     align-items: center;
-    color: #fff;
+    color: black;
+    background-color: green;
 
-}
+} */
 
 .insta {
     grid-area: insta;
@@ -199,6 +228,129 @@ h4 {}
 .footer-content {
     grid-area: footer-content;
     background-color: var(--footer-color);
+    background: url('../images/SC.png');
+
+}
+
+/*********************
+Icons*****************/
+
+
+
+/**********************
+Tour-Dates
+********************/
+.news {
+    padding: 1em;
+    background-color: var(--footer-color);
+}
+
+.tour {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card {
+    display: flex;
+    margin-bottom: 1em;
+    /* background-color: aliceblue; */
+
+}
+
+.card a {
+    width: 100%;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    background: var(--overlay-color);
+    /* border: 1px transparent; */
+    color: white;
+    transition: all .25s;
+}
+
+.card a:focus,
+.card a:hover {
+    margin: -5px 5px 5px -5px;
+    box-shadow: 5px 5px 0px 0px var(--overlay-color);
+}
+
+.time {
+    grid-column: 1;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.month {
+    text-transform: uppercase;
+    color: #0052BB;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.tour h2 {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: .5em;
+    align-self: flex-end;
+}
+
+.info {
+    grid-column: 2;
+    grid-row: 2;
+    padding-bottom: 1em;
+}
+
+/**********************
+Card-Grid
+********************************/
+@supports (grid-area: auto) {
+    .card a {
+        display: grid;
+        grid-template-columns: 6em auto;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+        text-align: left;
+        /* border: #fff solid 2px; */
+
+
+
+
+    }
+
+    .card h2 {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: flex-end;
+
+    }
+
+    .time {
+        grid-column: 1;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+
+    .info {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+
 
 }
 
@@ -263,8 +415,8 @@ h4 {}
 
     .merch {
         grid-area: merch;
-        /* border: #fff solid 2px; */
-        background-color: var(--main-content);
+
+
     }
 
     .footer-content {
@@ -275,7 +427,7 @@ h4 {}
     }
 
     .footer-content ul li a {
-        font-size: 
+       
         display: inline-block;
         border: none;
         color: var(--footer-color);
@@ -285,7 +437,7 @@ h4 {}
 
     }
 
-    
+
     .footer-content ul {
         display: grid;
         padding: 0;
