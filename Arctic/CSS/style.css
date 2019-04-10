@@ -2,12 +2,12 @@
 
 /* Opacity Colors*/
 :root {
-    /* --showcase-color: rgba(0, 0, 10, .75); */
+    --menu-radius: rgba(0, 0, 10, .9);
     --overlay-color: rgba(0, 0, 10, .35);
     --insta-color: rgba(253, 232, 233, 0.50);
     --merch-color: rgba(253, 232, 233, 0.50);
     --main-content: rgba(249, 245, 255, 0.50);
-    --footer-color: rgba(0, 0, 10, .85);
+    --showcase-color: rgba(0, 0, 10, .85);
     --menu-speed: 0.75s;
 }
 
@@ -18,11 +18,11 @@
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     font-size: 1em;
     color: #B0A08E;
-    
+
 
 }
 
@@ -41,8 +41,8 @@ h6 {
     clear: both;
     color: #B0A08E;
     line-height: 1.7em;
-    font-family: 'Quicksand', sans-serif;
     letter-spacing: 2.5px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 p {
@@ -74,9 +74,44 @@ p {
 
 .showcase h1 {
     font-size: 63px;
+}
 
+.showcase h2 {
+    margin-top: 1em;
+}
+
+.merch {
+    grid-area: merch;
+    background-color: var(--overlay-color);
+    height: 100%;
 
 }
+
+hr {
+    display: block;
+    border-color: #B0A08E;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-style: inset;
+    border-width: 1px;
+}
+
+/*********************
+    sub-grid of .merch for music buttons
+    **************************/
+.merch ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "buttons buttons"
+        "buttons buttons";
+    width: 100%;
+    margin: 1em;
+}
+
+/***************************************/
 
 
 .merch ul li a {
@@ -101,52 +136,14 @@ p {
 }
 
 .merch ul li {
-    display: inline-block;
+    /* display: inline-block; */
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    font-size: 1em;
-    margin: 1em;
-   
-
-}
-
-.merch ul {
-    width: 100%;
-
-}
-
-
-  
-  
-
-.footer-content ul li a {
-    display: inline-block;
-    border: none;
-    color: var(--footer-color);
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    letter-spacing: 2.5px;
-    
-}
-
-.footer-content ul li {
-    display: grid;
-    flex-direction: column;
-    padding: 1em;
-
-}
-
-
-
-.footer-content p {
-    text-align: center;
-    color: #fff;
     font-size: .5em;
-    margin-bottom: 2em;
-    letter-spacing: 2.5px;
+    padding: 1.5em;
+
 
 }
 
@@ -176,8 +173,9 @@ p {
         "showcase"
         "main-content"
         "news"
-        "insta"
         "merch"
+        "insta"
+
         "footer-content";
 
 }
@@ -187,29 +185,16 @@ p {
     color: #fff;
     height: 100vh;
     position: relative;
-    background: var(--footer-color);
+    background: var(--showcase-color);
 }
 
 .main-content {
     grid-area: main-content;
-    background: var(--footer-color);
+    background: var(--showcase-color);
     text-align: center;
     padding: 3em;
-    /* margin: 0 2em; */
-
-
-
-
 }
 
-/* .news {
-    grid-area: news;
-    text-align: center;
-    align-items: center;
-    color: black;
-    background-color: green;
-
-} */
 
 .insta {
     grid-area: insta;
@@ -218,19 +203,70 @@ p {
     width: 100%;
     height: 20vh;
     align-items: center;
+   
+}
+.insta h1 {
+    color: #000;
 }
 
-.merch {
-    grid-area: merch;
-}
 
 
 .footer-content {
     grid-area: footer-content;
-    background-color: var(--footer-color);
     background: url('../images/SC.png');
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+/*******************************************
+    sub-grid of .footer-content for nav-links
+    **************************/
+
+.footer-content ul {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-areas:
+        "footer-items footer-items"
+        "footer-items footer-items";
+    text-align: center;
+    /* border: #fff solid 2px; */
+}
+
+.footer-content ul li a {
+    color: #888;
+    text-decoration: none;
 
 }
+
+.footer-content li {
+    display: inline-block;
+    padding: 1em;
+    font-size: 1em;
+    
+}
+
+.footer-content p {
+    text-align: center;
+    color: #fff;
+    font-size: .5em;
+    margin-bottom: 2em;
+    letter-spacing: 2.5px;
+
+}
+
+#bg {
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    font-size: .5em;
+    padding: 1em;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
 
 /*********************
 Icons*****************/
@@ -242,7 +278,8 @@ Tour-Dates
 ********************/
 .news {
     padding: 1em;
-    background-color: var(--footer-color);
+    background-color: var(--overlay-color);
+
 }
 
 .tour {
@@ -263,7 +300,7 @@ Tour-Dates
     padding: 0 1em;
     text-align: center;
     text-decoration: none;
-    background: var(--overlay-color);
+    background: var(--showcase-color);
     /* border: 1px transparent; */
     color: white;
     transition: all .25s;
@@ -272,7 +309,7 @@ Tour-Dates
 .card a:focus,
 .card a:hover {
     margin: -5px 5px 5px -5px;
-    box-shadow: 5px 5px 0px 0px var(--overlay-color);
+    box-shadow: 2px 2px 0px 0px var(--overlay-color);
 }
 
 .time {
@@ -415,8 +452,6 @@ Card-Grid
 
     .merch {
         grid-area: merch;
-
-
     }
 
     .footer-content {
@@ -427,7 +462,7 @@ Card-Grid
     }
 
     .footer-content ul li a {
-       
+
         display: inline-block;
         border: none;
         color: var(--footer-color);
