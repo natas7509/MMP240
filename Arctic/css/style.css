@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     line-height: 1.6;
     font-size: 1em;
     color: #B0A08E;
+
 
 
 }
@@ -145,14 +147,14 @@ Master grids
     padding: 0;
     list-style-type: none;
     background-color: var(--overlay-color);
-    
+
 }
 
 .instagram {
     grid-area: instagram;
     text-align: center;
     width: 100%;
-    
+
 }
 
 .page-title {
@@ -167,9 +169,7 @@ Master grids
     height: 100%;
 }
 
-.merch {
-    
-}
+.merch {}
 
 .merch ul li a {
     display: inline-block;
@@ -236,22 +236,20 @@ Master grids
 
 
 .footer-items ul li a {
-    
+
     color: #888;
     text-decoration: none;
-    
-   
+
+
 
 }
 
 .footer-items li {
     display: inline-block;
-    padding:  auto 1em;
+    padding: auto 1em;
     font-size: 1em;
     /* border: #fff solid 1px; */
     /* margin-top: 1em; */
-    
-    
 
 }
 
@@ -281,15 +279,49 @@ Master grids
     border: #fff 1px solid;
 } */
 
-.footer-items ul  {
+.footer-items ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "footer-items footer-items footer-items"
-         "footer-items";
+        "footer-items";
     text-align: center;
     margin: 20px 20px 0 20px;
-    
+
+    /* align-items: center; */
+}
+
+.footer-icons ul li a {
+
+    color: #888;
+    text-decoration: none;
+
+
+
+}
+
+.footer-icons li {
+    /* display:flex;
+    align-items: center;
+    justify-content: space-evenly; */
+
+        /* display: inline-block; */
+    /* padding:  auto 1em; */
+    font-size: 1.2em;
+    border: #fff solid 1px;
+    margin-top: 1em;
+
+
+}
+
+.footer-icons ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "footer-items footer-items footer-items";
+    text-align: center;
+    /* margin: 20px 20px 0 20px; */
+
     /* align-items: center; */
 }
 
@@ -426,11 +458,12 @@ Card-Grid
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
     .card {
         margin-bottom: 0;
     }
 
-    
+
     .site {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -440,6 +473,26 @@ Card-Grid
             "merch instagram"
             "footer-content footer-content";
 
+    }
+}
+
+/****************
+    1024px and up ****/
+
+@media screen and (min-width: 1024px) {
+
+    .footer-icons li {
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    
+            /* display: inline-block; */
+        /* padding:  auto 1em; */
+        font-size: 1.2em;
+        border: #fff solid 1px;
+        margin-top: 1em;
+    
+    
     }
 }
 
