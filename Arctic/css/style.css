@@ -233,16 +233,25 @@ Master grids
     background: url('../images/SC.png');
 }
 
-.footer-content ul li a {
+
+
+.footer-items ul li a {
+    
     color: #888;
     text-decoration: none;
+    
+   
 
 }
 
-.footer-content li {
+.footer-items li {
     display: inline-block;
-    padding: 1em;
+    padding:  auto 1em;
     font-size: 1em;
+    /* border: #fff solid 1px; */
+    /* margin-top: 1em; */
+    
+    
 
 }
 
@@ -259,14 +268,31 @@ Master grids
     sub-grid of .footer-content for nav-links
     **************************/
 
-.footer-content ul {
+/* .footer-content ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "footer-items footer-items"
         "footer-items footer-items";
     text-align: center;
+} */
+/* .footer-items {
+    grid-area: footer-items;
+    border: #fff 1px solid;
+} */
+
+.footer-items ul  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "footer-items footer-items footer-items"
+         "footer-items";
+    text-align: center;
+    margin: 20px 20px 0 20px;
+    
+    /* align-items: center; */
 }
+
 
 /*******************************************
 
@@ -296,8 +322,6 @@ Tour-Dates sub-grid of .main-content
 .card {
     display: flex;
     margin-bottom: 1em;
-    /* background-color: aliceblue; */
-
 }
 
 .card a {
@@ -306,10 +330,10 @@ Tour-Dates sub-grid of .main-content
     text-align: center;
     text-decoration: none;
     background: var(--showcase-color);
-    /* border: 1px transparent; */
     color: white;
     transition: all .25s;
 }
+
 
 .card a:focus,
 .card a:hover {
