@@ -1,3 +1,12 @@
+/* Opacity Colors*/
+:root {
+  --menu-radius: rgba(0, 0, 10, .9);
+  --overlay-color: rgba(20, 7, 13, .35);
+  /* --showcase-color: rgba(0, 0, 10, .85); */
+  --gold-text: rgb(176, 160, 142);
+  --menu-speed: 0.75s;
+}
+
 /* MENU STYLES */
 .menu-wrap {
   position: fixed;
@@ -146,13 +155,13 @@
   .menu-wrap .menu>div>div>ul>li {
     
     position: sticky;
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: left;
+    /* float: right; */
+    display: inline-block;
+    color: var(--gold-text);
+    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 1.7em;
   }
   
   .menu-wrap .menu>div>div>ul>li>a:hover {
@@ -160,6 +169,8 @@
     color: #fff;
     opacity: .7;
   }
+
+  
   
 
   
