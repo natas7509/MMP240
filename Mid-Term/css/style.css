@@ -527,8 +527,7 @@ Card-Grid
     
 }
 
-/****************
-    1024px and up ****/
+
 
 
 
@@ -544,6 +543,9 @@ Card-Grid
 
 
 
+/****************
+    1200px and up 
+    ***************/
 
     @media screen and (min-width: 1200px) {
  
@@ -562,19 +564,33 @@ Card-Grid
     .loginbox {
         grid-area: loginbox;
         background:transparent;
-        padding: 0 7em;
+        padding: 2em 7em;
         font-size: .9em;
     }
     .button {
         margin-bottom: 0;
         font-size: 1em;
+        /* padding: 1em 1em; */
+        width: 10%;
+        /* border: #B0A08E solid .25px; */
+        background: var(--overlay-color);
+        
+    }
+
+    .button:hover {
+    
+        border: #B0A08E solid .25px;
+        
     }
     .footer-items ul li a {
         font-size: 1em;
     }
     .container-2 {
-        /* border-top: 1px solid #fff; */
-        padding: 0 4em;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    
     }
     .sidebar {
         border-top: 0;
