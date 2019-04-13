@@ -51,11 +51,13 @@ p {
     margin: 1.5em;
 }
 
-/* .container {
-    max-width: 960px;
+/*
+  .container {
+    max-width: 960px; 
     margin: auto;
     overflow: hidden;
-} */
+}  
+*/
 
 
 
@@ -90,6 +92,8 @@ p {
 
 
 
+
+
 /****************************
 Master grids
 *****************************/
@@ -107,6 +111,18 @@ Master grids
 
 }
 
+.galleryPage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "showcase"
+        "main-content"
+        "sidebar"
+        "streaming"
+        "loginbox"
+        "footer-content";
+
+}
 
 
 
@@ -249,29 +265,26 @@ input[type="password"] {
 
 .streaming{
     grid-area: streaming;
-    /* grid-gap: 5em; */
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    /* border: 1px solid #B0A08E; */
-    background-color:#fff;
-    
-   
-
-    /* margin-top: 2em; */
+    width: 100%;
+    padding: 1em;
 }
 
 .button {
 
-    background: none;
+    background: pink;
+    width: 30%;
     padding: 5px 13px;
     font-size: 12px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
     border: green solid 1px;
     border-radius: 2px;
+    text-align: cent
+        ;
 
 }
 
@@ -290,7 +303,7 @@ input[type="password"] {
 .btn1:hover,
 .btn2:hover {
     color: #000;
-    opacity: .;
+    opacity: 0.7;
     transition: 1s ease;
 }
 
@@ -491,9 +504,71 @@ Card-Grid
 *****************************************************************************/
    
 
+
+
+/* ---------------end-of-600px--------------------------- */
+
+
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+/*--------------------------------------------------------------
+Cards:
+--------------------------------------------------------------*/
+
+.kards {
+	margin: 1em;
+	padding: 0;
+	list-style-type: none;
+}
+
+.kards a {
+	display: block;
+	margin-bottom: 1em;
+	text-decoration: none;
+}
+
+.caption {
+	padding: 1em;
+	background: hsla(246, 40%, 30%, 0);
+	color: white;
+	font-size: 1.2em;
+	transition: all .4s;
+	opacity: 0;
+}
+
+a:focus .caption,
+a:hover .caption {
+	background: hsla(246, 40%, 30%, .5);
+	opacity: 1;
+}	
+
+.caption-title {
+	margin: 0;
+	font-size: 1.4em;
+	line-height: 1.1em;
+}
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+@supports (grid-area: auto) {
+
+
 @media screen and (min-width: 600px) {
 
-    .tour {
+    /* .tour {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -509,12 +584,11 @@ Card-Grid
         padding: 0;
         text-align: center;
     
-    }
+    } */
 
 
-    .site {
+    /* .site {
         display: grid;
-        
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "showcase showcase"
@@ -523,96 +597,81 @@ Card-Grid
             "loginbox sidebar"
             "footer-content footer-content";
 
-    }
+    } */
 
-    .loginbox {
-        grid-area: loginbox;
-        background: green;
-        padding: 4em;
-        font-size: .9em;
-        border: #B0A08E solid .5px;
-    }
+    /* .galleryPage {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        grid-template-areas: 
+        "showcase showcase"
+        "main-area main-area"
+        "streaming streaming"
+        "sidebar sidebar"
+        "footer-content footer-content";
+    } */
 
+        
+
+
+		.kards{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1em;
+		}
+
+		.kards a {
+			margin-bottom: 0;
+		}
+
+		.card {
+			display: grid;
+		}
+
+		.card img,
+		.caption {
+			grid-column: 1;
+			grid-row: 1;
+		}
+
+		.caption {
+			display: flex;
+			align-items: flex-end;
+			opacity: 0;
+
+		}
+
+		a:hover .caption {
+			opacity: 1;
+        }
+
+        
+
+    }
     
 }
 
-/* ---------------end-of-600px--------------------------- */
-
-
-/**********************************************************************************
-    1200px and up
-*****************************************************************************/
-/* 
-    @media screen and (min-width: 1200px) {
- 
-    .site {
-        display: grid;
-        grid-template-columns: 1fr repeat(2, minmax(auto, 600px)) 1fr;
-        grid-template-areas:
-            "showcase showcase showcase showcase"
-            " . main-content main-content . "
-            " . streaming sidebar . "
-            " . loginbox sidebar . "
-            "footer-content footer-content footer-content footer-content";
-
-    }
-   
-    .loginbox {
-        grid-area: loginbox;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        font-size: .9em;
-        margin: 2em 5em;
-        width: 70%;
-
-    }
-    .button {
-        margin-bottom: 0;
-        font-size: 1em;
-        width: 10%;
-        background: var(--overlay-color);
+	@media screen and (min-width: 60em) {
         
-    }
-
-    .button:hover {
-        border: #B0A08E solid .25px; 
-    }
-    .footer-items ul li a {
-        font-size: 1em;
-    }
-    .streaming{
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-        margin: 2.5em 0 2em 0;
+      
+		.kards {
+			grid-template-columns: repeat(4, 1fr);
+		}
         
-    }
-    .sidebar {
-        border-top: 0;
-    }
+        	.footer-content {
+			grid-template-columns: repeat(4, 1fr);
+		}
+        
+        
+     
 
-    .showcase h1 {
-        font-size: 4.6em;
-    }
-
-    .showcase h2 {
-        font-size: 2.2em;
-    }
-    
+}
+        
+        
 
 
-
-    }
-
- */
+	} 
 
 
-    
-    
 
     
                         
