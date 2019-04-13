@@ -1,4 +1,14 @@
-/*Photo by rawpixel.com from Pexels*/
+/*
+pics listed below (Pexels.com)
+Photo by rawpixel.com from Pexels
+Photo by Sebastian Ervi from Pexels
+Photo by anna-m. w. from Pexels
+Photo by Brett Sayles from Pexels
+Photo by mikky koopac from Pexels
+Photo by Tom Fisk from Pexels
+Photo by Wendy Wei from Pexels
+Photo by Mantas Hesthaven from Pexels
+*/
 
 /* Opacity Colors*/
 :root {
@@ -90,12 +100,15 @@ Master grids
     grid-template-areas:
         "showcase"
         "main-content"
-        "container-2"
+        "streaming"
         "sidebar"
         "loginbox"
         "footer-content";
 
 }
+
+
+
 
 .showcase {
     grid-area: showcase;
@@ -140,15 +153,16 @@ Master grids
     margin: 0;
     padding: 0;
     list-style-type: none;
+    background-color: aliceblue;
 
 }
 
 .loginbox {
     grid-area: loginbox;
     background: url(../images/SC.png);
-
-    padding: 2em;
+    padding: 4em;
     font-size: .9em;
+    border: #B0A08E solid .5px;
 }
 
 .loginbox h1 {
@@ -176,8 +190,6 @@ input[type="password"] {
     /* height: 40px; */
     color: #fff;
     font-size: .8em;
-
-
 }
 
 .loginbox input[type="submit"] {
@@ -220,9 +232,9 @@ input[type="password"] {
     justify-content: center;
     text-align: center;
     width: 100%;
-    background-color: transparent;
+    background-color: pink;
     padding-bottom: 1em;
-    border-top: #fff solid 1px;
+    /* border-top: #fff solid 1px; */
 
 }
 
@@ -235,15 +247,20 @@ input[type="password"] {
     color: #fff;
 }
 
-.container-2 {
-    grid-area: container-2;
+.streaming{
+    grid-area: streaming;
+    /* grid-gap: 5em; */
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    align-content: center;
+    justify-content: center;
     text-align: center;
     /* border: 1px solid #B0A08E; */
-    /* background-color:#fff; */
+    background-color:#fff;
+    
+   
+
+    /* margin-top: 2em; */
 }
 
 .button {
@@ -253,9 +270,9 @@ input[type="password"] {
     font-size: 12px;
     cursor: pointer;
     margin: 10px;
-    border: transparent solid 1px;
+    border: green solid 1px;
     border-radius: 2px;
-    margin-bottom: 3em;
+
 }
 
 .btn1,
@@ -265,7 +282,7 @@ input[type="password"] {
 
 .btn3,
 .btn4 {
-    color: rgb(176, 160, 142);
+    color: #B0A08E;
 
 
 }
@@ -466,9 +483,13 @@ Card-Grid
 }
 
 
-/****************
-    600px and up ****/
-    @supports (grid-area: auto) {
+
+
+
+/**********************************************************************************
+    600px and up
+*****************************************************************************/
+   
 
 @media screen and (min-width: 600px) {
 
@@ -493,11 +514,12 @@ Card-Grid
 
     .site {
         display: grid;
+        
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "showcase showcase"
             "main-content main-content"
-            "container-2 sidebar"
+            "streaming sidebar"
             "loginbox sidebar"
             "footer-content footer-content";
 
@@ -505,48 +527,22 @@ Card-Grid
 
     .loginbox {
         grid-area: loginbox;
-        background: transparent;
-        padding: 0 9em;
+        background: green;
+        padding: 4em;
         font-size: .9em;
-    }
-    .button {
-        margin-bottom: 0;
-        font-size: 1em;
-    }
-    .footer-items ul li a {
-        font-size: 1em;
-    }
-    .container-2 {
-        /* border-top: 1px solid #fff; */
-        padding: 0 4em;
-    }
-    .sidebar {
-        border-top: 0;
+        border: #B0A08E solid .5px;
     }
 
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------end-of-600px--------------------------- */
 
 
-
-
-/****************
-    1200px and up 
-    ***************/
-
+/**********************************************************************************
+    1200px and up
+*****************************************************************************/
+/* 
     @media screen and (min-width: 1200px) {
  
     .site {
@@ -554,43 +550,46 @@ Card-Grid
         grid-template-columns: 1fr repeat(2, minmax(auto, 600px)) 1fr;
         grid-template-areas:
             "showcase showcase showcase showcase"
-            ". main-content main-content . "
-            " . container-2 container-2 . "
+            " . main-content main-content . "
+            " . streaming sidebar . "
             " . loginbox sidebar . "
             "footer-content footer-content footer-content footer-content";
 
     }
-
+   
     .loginbox {
         grid-area: loginbox;
-        background:transparent;
-        padding: 2em 7em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
         font-size: .9em;
+        margin: 2em 5em;
+        width: 70%;
+
     }
     .button {
         margin-bottom: 0;
         font-size: 1em;
-        /* padding: 1em 1em; */
         width: 10%;
-        /* border: #B0A08E solid .25px; */
         background: var(--overlay-color);
         
     }
 
     .button:hover {
-    
-        border: #B0A08E solid .25px;
-        
+        border: #B0A08E solid .25px; 
     }
     .footer-items ul li a {
         font-size: 1em;
     }
-    .container-2 {
+    .streaming{
         display: flex;
         flex-direction: row;
         align-content: center;
         justify-content: center;
-    
+        margin: 2.5em 0 2em 0;
+        
     }
     .sidebar {
         border-top: 0;
@@ -608,10 +607,15 @@ Card-Grid
 
 
     }
+
+ */
+
+
+    
+    
+
     
                         
        
        
     
-   
-} 
