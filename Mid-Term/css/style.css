@@ -14,6 +14,7 @@ Photo by Mantas Hesthaven from Pexels
 :root {
     --menu-radius: rgba(0, 0, 10, .9);
     --overlay-color: rgba(20, 7, 13, .35);
+    --imgOpacity: rgba(20, 7, 13, .6);
     /* --showcase-color: rgba(0, 0, 10, .85); */
     --gold-text: rgb(176, 160, 142);
     --menu-speed: 0.75s;
@@ -40,11 +41,10 @@ h3,
 h4,
 h5,
 h6 {
-    clear: both;
-    color: var(--gold-text);
+   
     line-height: 1.7em;
-    letter-spacing: 2.5px;
-    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2.8px;
+    font-family: 'Asap', sans-serif;
 }
 
 p {
@@ -104,27 +104,11 @@ Master grids
     grid-template-areas:
         "showcase"
         "main-content"
+        "loginbox"
         "streaming"
         "sidebar"
-        "loginbox"
         "footer-content";
-
 }
-
-.galleryPage {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "showcase"
-        "main-content"
-        "sidebar"
-        "streaming"
-        "loginbox"
-        "footer-content";
-
-}
-
-
 
 .showcase {
     grid-area: showcase;
@@ -169,7 +153,7 @@ Master grids
     margin: 0;
     padding: 0;
     list-style-type: none;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
 
 }
 
@@ -178,7 +162,7 @@ Master grids
     background: url(../images/SC.png);
     padding: 4em;
     font-size: .9em;
-    border: #B0A08E solid .5px;
+    /* border: #B0A08E solid .5px; */
 }
 
 .loginbox h1 {
@@ -248,7 +232,7 @@ input[type="password"] {
     justify-content: center;
     text-align: center;
     width: 100%;
-    background-color: pink;
+    background: url('../images/SC.png');
     padding-bottom: 1em;
     /* border-top: #fff solid 1px; */
 
@@ -263,7 +247,7 @@ input[type="password"] {
     color: #fff;
 }
 
-.streaming{
+.streaming {
     grid-area: streaming;
     display: flex;
     flex-direction: row;
@@ -273,7 +257,7 @@ input[type="password"] {
 
 .button {
 
-    background: pink;
+    background: transparent;
     width: 30%;
     padding: 5px 13px;
     font-size: 12px;
@@ -281,10 +265,9 @@ input[type="password"] {
     align-items: center;
     justify-content: center;
     margin: 10px;
-    border: green solid 1px;
+    border: transparent;
     border-radius: 2px;
-    text-align: cent
-        ;
+    text-align: cent;
 
 }
 
@@ -305,6 +288,7 @@ input[type="password"] {
     color: #000;
     opacity: 0.7;
     transition: 1s ease;
+    border: #B0A08E solid 1px;
 }
 
 .btn3:hover,
@@ -312,89 +296,52 @@ input[type="password"] {
     color: #000;
     opacity: .7;
     transition: 1s ease;
+    border: #B0A08E solid 1px;
 
 }
 
 .footer-content {
     grid-area: footer-content;
     background: url('../images/SC.png');
-}
-
-
-
-.footer-items ul li a {
-
-    color: #888;
-    text-decoration: none;
-    font-size: .9em;
-}
-
-.footer-items ul li a:hover {
-    color: var(--overlay-color);
-    transition: 0.7s;
-}
-
-.footer-items li {
-    display: inline-block;
-    padding: auto 1em;
-    font-size: 1em;
-    /* border: #fff solid 1px; */
-    /* margin-top: 1em; */
 
 }
 
 .footer-content p {
+    font-size: 10px;
     text-align: center;
-    color: #fff;
-    font-size: .5em;
-    margin-bottom: 2em;
-    letter-spacing: 2.5px;
-
 }
-.footer-icons ul li a {
 
-    color: #888;
+
+.footer-items ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: .5em;
+    list-style-type: none;
+}
+
+.footer-content ul {
+    list-style-type: none;
+}
+
+.footer-content ul li a:hover {
+    color: #000;
+    opacity: .7;
+    transition: 1s ease;
+    
+   
+}
+
+.footer-content ul li a {
     text-decoration: none;
-    font-size: 1.2em;
+    color: #B0A08E;
+    
 }
 
-.footer-icons ul li a:hover {
-    color: var(--overlay-color);
-    transition: 0.7s;
+.footer-icons {
+    text-decoration: none;
 }
 
-.footer-icons li {
-    list-style: none;
-    font-size: 1.2em;
-    /* border: #fff solid 1px; */
-    margin-top: 1em;
-}
-
-/*******************************************
-    sub-grid of .footer-content for nav-links
-    **************************/
-
-.footer-items ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "footer-items footer-items footer-items"
-        "footer-items";
-    text-align: center;
-    margin: 20px 20px 0 20px;
-
-}
-
-.footer-icons ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        "footer-items footer-items footer-items";
-    text-align: center;
-    /* margin: 20px 20px 0 20px; */
-
-    /* align-items: center; */
-}
 
 
 /******************************
@@ -502,7 +449,7 @@ Card-Grid
 /**********************************************************************************
     600px and up
 *****************************************************************************/
-   
+
 
 
 
@@ -516,10 +463,10 @@ General styling
 
 
 img {
-	display: block;
-	border: 0;
-	width: 100%;
-	height: auto;
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -527,36 +474,40 @@ Cards:
 --------------------------------------------------------------*/
 
 .kards {
-	margin: 1em;
-	padding: 0;
-	list-style-type: none;
+    margin: 1em;
+    padding: 0;
+    list-style-type: none;
 }
 
 .kards a {
-	display: block;
-	margin-bottom: 1em;
-	text-decoration: none;
+    display: block;
+    margin-bottom: 1em;
+    text-decoration: none;
 }
 
 .caption {
-	padding: 1em;
-	background: hsla(246, 40%, 30%, 0);
-	color: white;
-	font-size: 1.2em;
-	transition: all .4s;
-	opacity: 0;
+
+    padding: 1em;
+    background: var(--overlay-color);
+    color: black;
+    font-size: 1em;
+    transition: all .4s;
+    opacity: 0;
 }
+
+
 
 a:focus .caption,
 a:hover .caption {
-	background: hsla(246, 40%, 30%, .5);
-	opacity: 1;
-}	
+
+    background: transparent;
+    opacity: 1;
+}
 
 .caption-title {
-	margin: 0;
-	font-size: 1.4em;
-	line-height: 1.1em;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.1em;
 }
 
 
@@ -566,115 +517,128 @@ CSS Grid layout for wider screens, when browser supports grid:
 @supports (grid-area: auto) {
 
 
-@media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) {
 
-    /* .tour {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .card {
-        margin-bottom: 0;
-    }
-
-    .card a {
-        display: grid;
-        grid-template-columns: inherit;
-        grid-template-rows: 1fr 1fr;
-        padding: 0;
-        text-align: center;
-    
-    } */
-
-
-    /* .site {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "showcase showcase"
-            "main-content main-content"
-            "streaming sidebar"
-            "loginbox sidebar"
-            "footer-content footer-content";
-
-    } */
-
-    /* .galleryPage {
-        display: grid;
-        grid-template-columns:  1fr 1fr;
-        grid-template-areas: 
-        "showcase showcase"
-        "main-area main-area"
-        "streaming streaming"
-        "sidebar sidebar"
-        "footer-content footer-content";
-    } */
-
-        
-
-
-		.kards{
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 1em;
-		}
-
-		.kards a {
-			margin-bottom: 0;
-		}
-
-		.card {
-			display: grid;
-		}
-
-		.card img,
-		.caption {
-			grid-column: 1;
-			grid-row: 1;
-		}
-
-		.caption {
-			display: flex;
-			align-items: flex-end;
-			opacity: 0;
-
-		}
-
-		a:hover .caption {
-			opacity: 1;
+        .tour {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
 
+        .card {
+            margin-bottom: 0;
+        }
+
+        .card a {
+            display: grid;
+            grid-template-columns: inherit;
+            grid-template-rows: 1fr 1fr;
+            padding: 0;
+            text-align: center;
+
+        }
+
+        .site {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+            grid-template-areas:
+                "showcase showcase"
+                "main-content main-content"
+                "loginbox  sidebar"
+                "streaming streaming"
+                "footer-content footer-content";
+        }
+
+        .kards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1em;
+        }
+
+        .kards a {
+            margin-bottom: 0;
+        }
+
+        .pics {
+            display: grid;
+        }
+
+        .pics img,
+        .caption {
+            grid-column: 1;
+            grid-row: 1;
+            color: #fff;
+
+        }
+
+        .caption {
+            background: var(--imgOpacity);
+            display: flex;
+            align-items: flex-end;
+            opacity: 0;
+
+
+        }
+
+        a:focus .caption,
+        a:hover .caption {
+
+            background: var(--imgOpacity);
+            opacity: 1;
+        }
+
+        a:hover .caption {
+            opacity: 1;
+
+        }
+
+
+        /*------Footer-------------------------------
+        -------------------------------------------*/
+
+        .footer-content ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            /* border: #000 1px solid; */
+            /* max-width: 50%; */
+            
+        }
+
+        .footer-content ul li {
+           margin:  2em 3em;
+           
+        }
+
+        .footer-icons a {
+            font-size: 1.5em;
+        }
         
 
     }
-    
-}
-
-	@media screen and (min-width: 60em) {
-        
-      
-		.kards {
-			grid-template-columns: repeat(4, 1fr);
-		}
-        
-        	.footer-content {
-			grid-template-columns: repeat(4, 1fr);
-		}
-        
-        
-     
 
 }
+
+@media screen and (min-width: 1200px) {
+
+    .kards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-content ul li {
+        margin:  2em 5em;
         
-        
+     }
 
+     .btn1:hover,
+.btn2:hover {
+    border: transparent;
+}
 
-	} 
+.btn3:hover,
+.btn4:hover {
+    border: transparent;  
+}
 
-
-
-    
-                        
-       
-       
-    
+}
