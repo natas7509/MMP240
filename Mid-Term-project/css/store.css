@@ -1,0 +1,387 @@
+/*Photo by Gabriel Peter from Pexels*/
+
+
+/* CSS Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --overlay-color: rgba(20, 7, 13, .05);
+    --text-box: rgba(20, 7, 13, .35);
+    --imgOpacity: rgba(20, 7, 13, .6);
+    --gold-text: rgb(176, 160, 142);
+
+}
+
+html {
+    box-sizing: border-box;
+    color: var(--dark);
+}
+
+body {
+    background: white;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    line-height: 1.4em;
+    letter-spacing: 2.8px;
+    font-family: 'Asap', sans-serif;
+   
+}
+
+
+.btn {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.6em 1.3em;
+    text-decoration: none;
+    border-radius: .2em;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1em;
+
+}
+
+/* Navigation */
+.main-nav ul {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 0;
+    list-style: none;
+    
+    
+    
+}
+
+.main-nav ul li {
+  
+    border: 1px solid transparent;
+}
+
+.main-nav ul li:hover {
+    border: 1px solid var(--dark);
+    opacity: 0.7;
+    transition: 1s ease-in;
+}
+
+.main-nav a {
+  
+    display: block;
+    text-decoration: none;
+    padding: 0.6em 1.3em;
+    text-align: center;
+    /* width: 50px; */
+    color: black;
+    /* text-transform: uppercase; */
+    font-size: 1.1em;
+    border-radius: .2em;
+  
+
+}
+
+.main-nav a:hover {
+    color: var(--gold-text);
+    opacity: 0.7;
+    transition: 1s ease;
+}
+
+/* Top Container */
+.top-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        'showcase showcase top-box-a'
+        'showcase showcase top-box-b'
+    ;
+}
+
+/* Showcase */
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url("../images/showcase-main.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+
+
+}
+
+.showcase h1 {
+    font-size: 4em;
+    font-weight: bolder;
+    margin-bottom: 0;
+    color: #ae1f25;
+    background: var(--overlay-color);
+}
+
+.showcase .btn {
+    margin-top: 1em;
+    
+}
+
+.showcase .btn:hover {
+    opacity: .7;
+    transition: 1s ease;
+}
+
+
+
+
+/* Top Box */
+.top-box {
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.top-box .concert {
+    font-size: 3.5rem;
+    /* background: var(--overlay-color); */
+    padding: 0 2px;
+}
+
+/* 
+  .top-box .showcase h1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  } */
+
+.top-box-a {
+    grid-area: top-box-a;
+    background: url('../images/g-1.jpg') center center/cover;
+    color: white;
+}
+.top-box-a .btn:hover {
+    opacity: .7;
+    transition: 1s ease;
+}
+
+.top-box-b .btn:hover {
+    opacity: .7;
+    transition: 1s ease;
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+    background: url('../images/g-11.jpg') center center/cover;
+    color: black;
+}
+
+/* Boxes */
+.boxes {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+    background: black;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    color: var(--gold-text);
+
+}
+
+/* Info */
+.info {
+    background: #ae1f25;
+    color: #fff;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+}
+
+.info h2 {
+    font-size: 2.5em;
+    color: var(--light);
+    text-align: center;
+   
+}
+
+/* Portfolio */
+.portfolio {
+    background: #fff;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+}
+
+.info .btn:hover {
+    opacity: .7;
+    transition: 1s ease;
+}
+
+.portfolio img {
+    width: 100%;
+
+}
+
+/* Footer */
+
+footer {
+    background: #000;
+    margin-top: 1em;
+
+}
+
+.footer-items {
+    text-align: center;
+    background: black;
+
+}
+
+
+.footer-items ul {
+    padding: 0;
+
+}
+
+.footer-items ul li {
+    display: inline;
+    text-align: center;
+    list-style: none;
+    margin: 0 5em;
+}
+
+.footer-items ul li a {
+    color: var(--gold-text);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.footer-items ul li a:hover {
+    color: var(--overlay-color);
+    opacity: .7;
+    transition: 1s ease;
+}
+
+.footer-icons ul {
+
+    padding: 0;
+}
+
+.footer-icons ul li {
+    display: inline;
+    text-align: center;
+    margin: 0 5em;
+}
+
+.footer-icons ul li a {
+    color: var(--gold-text);
+
+}
+
+.footer-icons ul li a:hover {
+    color: var(--overlay-color);
+    /* transition: 0.7s; */
+}
+
+ .footer-content #bg {
+
+    color: var(--gold-text);
+}
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 700px) {
+    .top-container {
+        grid-template-areas:
+            'showcase showcase'
+            'top-box-a top-box-b';
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+
+    .top-box h4 {
+       
+        font-size: 8px;
+    }
+
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+
+    }
+    .footer-items ul li {
+        display: inline;
+        text-align: center;
+        list-style: none;
+        /* margin-top: 2em; */
+        margin: 0 3em;
+      
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    .top-container {
+        grid-template-areas:
+            'showcase'
+            'top-box-a'
+            'top-box-b';
+    }
+
+    .footer-items ul li {
+        display: inline;
+        text-align: center;
+        list-style: none;
+        margin: 0 1em;
+    }
+
+    .footer-items p {
+        font-size: .8em;
+    }
+}
