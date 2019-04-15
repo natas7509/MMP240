@@ -10,7 +10,7 @@
     --text-box: rgba(20, 7, 13, .35);
     --imgOpacity: rgba(20, 7, 13, .6);
     --gold-text: rgb(176, 160, 142);
-
+/* 
 }
 
 html {
@@ -43,17 +43,17 @@ h6 {
     letter-spacing: 2.8px;
     font-family: 'Asap', sans-serif;
    
-}
+} */
 
 
-.btn {
+/* .btn {
     background: var(--dark);
     color: var(--light);
     padding: 0.6em 1.3em;
     text-decoration: none;
     border-radius: .2em;
 
-}
+} */
 
 img {
     max-width: 100%;
