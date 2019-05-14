@@ -312,7 +312,7 @@ img {
 }
 
 #header-inner {
-  background: url("../img/segway-1.JPG") no-repeat 20% 10%/cover;
+  background: url("/img/Header-1.jpg") no-repeat 20% 10%/cover;
   height: 5.5rem;
   border-bottom: 2px solid var(--hover-red);
 }
@@ -344,6 +344,45 @@ img {
 #home-b .stats div:nth-child(even) {
   background: #ccc;
 }
+
+/* animation for sec C Testimonials - Coaching Page */
+#home-c .process {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1.5rem;
+  text-align: center; }
+  #home-c .process-step {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 1rem;
+    transition: all 1s; }
+  #home-c .process-icon {
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+    transition: all 1s; }
+    #home-c .process-icon:hover {
+      background: red;
+      width: 90px;
+      height: 90px;
+      line-height: 90px; }
+      #home-c .process-icon:hover .process-step {
+        background: #333;
+        color: #fff; }
 
 #home-c .container {
   display: grid;
@@ -414,7 +453,8 @@ input[type="name"] {
   color: #fff;
 }
 
-
+/* ABOUT PAGE---------------------------------
+-------------------------------------------- */
 
 #about-a .about-info {
   display: grid;
@@ -422,9 +462,9 @@ input[type="name"] {
   grid-gap: 1.2rem;
 }
 
-/* #about-a .bio-image {
+#about-a .bio-image {
   grid-area: bioimage;
-} */
+}
 
 #about-a .bio {
   grid-area: bio;
@@ -432,7 +472,7 @@ input[type="name"] {
   padding: 7rem 0.8rem;
 }
 
-#about-a .award-1 {
+/* #about-a .award-1 {
   grid-area: aw1;
 }
 
@@ -442,7 +482,7 @@ input[type="name"] {
 
 #about-a .award-3 {
   grid-area: aw3;
-}
+} */
 
 #about-a .award-1 .fas,
 #about-a .award-2 .fas,
@@ -478,11 +518,18 @@ input[type="name"] {
 
 #about-d .testimonials {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5rem;
+  grid-template-columns: 1fr;
+  max-width: 50rem;
+  margin: auto;
+  /* grid-gap: 0.5rem; */
+}
+#about-d .testimonials .far {
+  padding: 0 1rem;
+  color: var(--hover-red);
 }
 
 #about-d .testimonials ul {
+  font-weight: bold;
   list-style: none;
   margin-top: 1rem;
   display: flex;
@@ -495,9 +542,24 @@ input[type="name"] {
   padding: 0.5rem;
 }
 
-#about-d .testimonials .fas {
+/* #about-d .testimonials .fas {
   padding: 0 1rem;
   color: var(--hover-red);
+} */
+
+/* coaching PAGE---------------------------------
+-------------------------------------------- */
+
+#coaching-a .coaching-info ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.2rem;
+}
+
+#coaching-a .coach {
+  grid-area: coach;
+  border-left: 3px solid var(--hover-red);
+  padding: 7rem 0.8rem;
 }
 
 #main-footer {
