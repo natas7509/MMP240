@@ -2,6 +2,14 @@
   Photo by Abigail Keenan on Unsplash
   Photo by Danijela Froki on Unsplash
   Photo by Willian Justen de Vasconcellos on Unsplash
+  Photo by Noelle Otto from Pexels
+  Photo by Digital Buggu from Pexels
+  Photo by Markus Spiske temporausch.com from Pexels
+  Photo by Craig Adderley from Pexels
+  Photo by Mike from Pexels
+  Photo by Thomas Chauke from Pexels
+  Photo by Zac Frith from Pexels
+  Photo by Serkan Göktay from Pexels
 */
 
 /* MYU Pallet */
@@ -11,6 +19,8 @@
   --sky: rgb(177, 221, 241);
   --green: rgb(68, 175, 105);
   --rust: rgb(209, 122, 34);
+  --overlay-color: rgba(20, 7, 13, 0.35);
+  --opacity: hsla(246, 40%, 30%, 0);
 }
 
 .container {
@@ -264,36 +274,42 @@ img {
   text-transform: uppercase;
 }
 
+
+
 #main-nav {
-  display: flex;
+  overflow: hidden;
+  display: block;
   justify-content: space-between;
   padding-top: 1rem;
 }
 
-#main-nav ul {
-  display: flex;
+#main-nav  ul {
+  display: block;
+  float: right;
 }
 
-#main-nav li {
+#main-nav  li {
   padding: 1rem 1.5rem;
 }
 
 #main-nav a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  border-bottom: 3px transparent solid;
-  padding-bottom: 0.5rem;
-  transition: border-color 0.5s;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s; }
+  
+
+#main-nav  a:hover {
+  border-color: #ccc;
 }
 
-#main-nav a:hover {
-  border-color: var(--sky);
+#main-nav  a.current {
+  border-color: red;
 }
 
-#main-nav a.current {
-  border-color: var(--hover-red);
-}
+
 
 #header-home {
   background: url("img/Header-1.jpg") no-repeat center right/cover;
@@ -317,6 +333,35 @@ img {
   border-bottom: 2px solid var(--hover-red);
 }
 
+/* .topnav {
+  overflow: hidden;
+  background-color: #5D4D55;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.topnav a:hover {
+  background-color: #D6E5E3;
+  color: black;
+}
+
+.active {
+  background-color: #A1869E;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+} */
 
 
 #home-b .stats {
@@ -350,39 +395,48 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-gap: 1.5rem;
-  text-align: center; }
-  #home-c .process-step {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 28px;
-    background: red;
-    color: #fff;
-    border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    line-height: 15px;
-    padding: 1rem;
-    transition: all 1s; }
-  #home-c .process-icon {
-    border-radius: 50%;
-    background: #333;
-    color: #fff;
-    padding: 2rem;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    position: relative;
-    transition: all 1s; }
-    #home-c .process-icon:hover {
-      background: red;
-      width: 90px;
-      height: 90px;
-      line-height: 90px; }
-      #home-c .process-icon:hover .process-step {
-        background: #333;
-        color: #fff; }
+  text-align: center;
+}
+
+#home-c .process-step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  padding: 1rem;
+  transition: all 1s;
+}
+
+#home-c .process-icon {
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+  transition: all 1s;
+}
+
+#home-c .process-icon:hover {
+  background: red;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+#home-c .process-icon:hover .process-step {
+  background: #333;
+  color: #fff;
+}
 
 #home-c .container {
   display: grid;
@@ -523,6 +577,7 @@ input[type="name"] {
   margin: auto;
   /* grid-gap: 0.5rem; */
 }
+
 #about-d .testimonials .far {
   padding: 0 1rem;
   color: var(--hover-red);
@@ -562,6 +617,46 @@ input[type="name"] {
   padding: 7rem 0.8rem;
 }
 
+/*-------------------------------------------------------------
+Gallery Block
+--------------------------------------------------------------*/
+
+.MYU-pics {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1em;
+  padding: 0;
+  list-style-type: none;
+  grid-gap: 1rem;
+}
+
+.MYU-pics a {
+  display: block;
+  /* margin-bottom: 1rem; */
+  text-decoration: none;
+}
+
+.caption {
+  padding: 1em;
+  background: hsla(246, 40%, 30%, 0);
+  color: white;
+  font-size: 1.2em;
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+a:focus .caption,
+a:hover .caption {
+  background: var(--overlay-color);
+  opacity: 1;
+}
+
+.caption-title {
+  margin: 0;
+  font-size: 1.4em;
+  line-height: 1.1em;
+}
+
 #main-footer {
   background: var(--charcoal);
   color: #fff;
@@ -593,3 +688,119 @@ input[type="name"] {
 #main-footer .footer-content .social .fab:hover {
   background: var(--hover-red);
 }
+
+/* ------------------------------------------------
+MEDIA QUERIES
+------------------------------------------------- */
+@media screen and (min-width: 600px) {
+  #main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+
+  #main-nav ul {
+    display: flex;
+  }
+
+  #main-nav li {
+    padding: 1rem 1.5rem;
+  }
+
+  #main-nav a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+  }
+
+  #main-nav a:hover {
+    border-color: #ccc;
+  }
+
+  #main-nav a.current {
+    border-color: red;
+  }
+
+  .MYU-pics {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin: 1em;
+    padding: 0;
+    list-style-type: none;
+    grid-gap: 1rem;
+  }
+
+  .pics {
+    display: grid;
+  }
+
+  .pics img,
+  .caption {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .caption {
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+  }
+
+  a:hover .caption {
+    opacity: 1;
+  }
+
+
+
+
+
+
+  @media screen and (min-width: 1200px) {
+    .MYU-pics {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+    .topnav.responsive {
+      position: relative;
+    }
+
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      /*If navigation button is off, fix padding here after styling text*/
+      /*padding: 17.25px 17px;*/
+
+    }
+
+    .topnav a.icon {
+      display: block;
+      height: auto;
+      width: auto;
+      /*If navigation button is off, fix padding here after styling text*/
+      /*padding: 17.25px 17px;*/
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  /*---------------------------------*/
