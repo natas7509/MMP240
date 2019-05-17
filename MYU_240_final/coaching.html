@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
   <title>Coaching</title>
+  <link rel="stylesheet" href="mobilenav_responsive.css">
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -17,14 +18,17 @@
   <!-- Header -->
   <header id="header-inner">
     <div class="container">
-      <nav id="main-nav">
-        <img src="img/logo.png" alt="MYU Soccer" id="logo" />
+      <nav class="topnav" id="myTopnav">
+        <img src="img/logo.png" alt="MYU" id="logo">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="coaching.html" class="current">Coaching</a></li>
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </div>
   </header>
@@ -40,16 +44,16 @@
           <h4>Tactical</h4>
           <br>
           <ul>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
+            <li>Ryan Phillips</li>
+            <li>Steven Walters</li>
+            <li>Ragan Targerian</li>
+            <li>Mathew Wilcox</li>
+            <li>Jeremy Frazerr</li>
+            <li>Suzanne Rogers</li>
+            <li>Simon West</li>
+            <li>Robert Crow</li>
+            <li>Brendon Bellamy</li>
+            <li>Sarah Croft</li>
           </ul>
         </div>
 
@@ -63,10 +67,10 @@
           <h4>Fitness</h4>
           <br>
           <ul>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
-            <li>Stuart Maunder</li>
+              <li>Ryan Phillips</li>
+              <li>Victoria Guidi</li>
+              <li>Ragan Targerian</li>
+              <li>Meli Georgiades</li>
             
           </ul>
         </div>
@@ -125,7 +129,7 @@
         At MYU we strive for excellence and are completely devoted to the development of our youth.
       </p>
       <div class="process">
-        <div>
+        <div class="staff">
           <i class="fas fa-user-shield fa-4x process-icon my-2">
             <div class="process-step">1</div>
           </i>
@@ -135,7 +139,7 @@
             coach!! Thanks Drew!! My older 2 kids loved Zach also!" – Parent of Player, Summer Camp 2014
           </p>
         </div>
-        <div>
+        <div class="staff">
           <i class="fas fa-user-injured fa-4x process-icon my-2">
             <div class="process-step">2</div>
           </i>
@@ -146,7 +150,7 @@
             Taylor
           </p>
         </div>
-        <div>
+        <div class="staff">
           <i class="fas fa-users fa-4x process-icon my-2">
             <div class="process-step">3</div>
           </i>
@@ -156,7 +160,7 @@
             He can get a bit restless at home so it's the perfect outlet for him." - Marry Lindgard
           </p>
         </div>
-        <div>
+        <div class="staff">
           <i class="fas fa-user-tie fa-4x process-icon my-2">
             <div class="process-step">4</div>
           </i>
@@ -198,6 +202,20 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <script src="js/typewriter.js"></script>
+
+
 </body>
 
 </html>

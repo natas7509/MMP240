@@ -3,63 +3,107 @@ Note This code has been adapted from this W3Schools Example:
 https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 */
 
-.topnav {
-  overflow: hidden;
-  background-color: #5D4D55;
+/* MYU Pallet */
+:root {
+  --hover-red: rgb(234, 25, 25);
+  --charcoal: rgb(67, 62, 73);
+  --sky: rgb(177, 221, 241);
+  --green: rgb(68, 175, 105);
+  --rust: rgb(209, 122, 34);
+  --overlay-color: rgba(20, 7, 13, 0.35);
+  --opacity: hsla(246, 40%, 30%, 0);
+}
 
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.topnav ul {
+  display: flex;
+}
+
+.topnav li {
+  padding: 1rem 1.5rem;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
 }
 
 .topnav a:hover {
-  background-color: #D6E5E3;
-  color: black;
+  border-color: #ccc;
 }
 
-.active {
-  background-color: #A1869E;
-  color: white;
+.topnav a.current {
+  border-color: red;
 }
 
 .topnav .icon {
   display: none;
 }
 
+
 /*media queries
 *******************************************************************/
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
+  
+  .topnav a {
+    display: none;
+    
+  }
+  .topnav li {
+    margin: 0;
+    padding: 0;
   }
 
-  .topnav.responsive {position: relative;}
+  .topnav ul {
+    display: block;
+    
+  }
+  
+  .topnav a.icon {
+
+    float: right;
+    display: block;
+    border-bottom: hidden;
+    margin-top: 1rem;
+  }
+
+  .topnav.responsive li {
+    position: relative;
+    margin: 1rem 1rem;
+    padding: 0 1rem;
+  }
+  .topnav.responsive {
+    background-color:var(--overlay-color);
+
+  }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
     /*If navigation button is off, fix padding here after styling text*/
-    /*padding: 17.25px 17px;*/
-    
+    padding: 17.25px 24px;
+
   }
-    
-  .topnav a.icon{
+
+   .topnav a.icon {
     display: block;
     height: auto;
     width: auto;
     /*If navigation button is off, fix padding here after styling text*/
-     /*padding: 17.25px 17px;*/
-    }
+    /*padding: 17.25px 17px;*/
+  } 
+
   .topnav.responsive a {
     float: none;
     display: block;
