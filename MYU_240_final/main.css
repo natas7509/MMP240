@@ -30,6 +30,15 @@
   overflow: hidden;
 }
 
+.zip-container {
+  max-width: 60%;
+  /* padding: 0 .5rem; */
+  margin: auto;
+  /* overflow: hidden; */
+  border: #fff solid 2px;
+  margin-top: 8rem;
+}
+
 .btn-main,
 .btn-light,
 .btn-dark {
@@ -416,6 +425,96 @@ img {
   margin: auto;
 }
 
+
+/* ------------------------------
+ZIP - LOGINBOX
+------------------------------ */
+
+#header-zip {
+  background: url("img/g-12.jpg") no-repeat bottom/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+#header-zip .header-content {
+  text-align: center;
+  padding-top: 20%;
+}
+
+#header-zip .header-content h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+}
+
+#header-zip .header-content h2 {
+  /* font-size: 2rem; */
+  /* line-height: 1.2; */
+  
+}
+
+/* ------------------------------
+MAP
+------------------------------ */
+
+#header-map {
+  background: url("img/map.jpg") no-repeat center center/cover;
+  height: 100vh;
+  cursor: pointer;
+  
+}
+.zip-loginbox {
+  width: 60%;
+  margin: auto;
+  padding: 3rem 0;
+  font-size: 0.9em;
+}
+
+
+.zip-loginbox p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.zip-loginbox input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.zip-loginbox input[type="zip"] {
+  color: var(--charcoal);
+  margin-top: 2rem;
+}
+
+.zip-loginbox button {
+  margin-left: 3px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  height: 2rem;
+  background: transparent;
+  font-size: 1rem;
+  border-radius: 7px;
+  color:#fff;
+}
+
+button a {
+  color: #fff;
+}
+
+.zip-loginbox button:hover {
+  cursor: pointer;
+  background: var(--hover-red);
+  /* border: #b0a08e 1px solid; */
+  color: #fff;
+}
+
+/* ------------------------------
+JOIN CLUB - LOGINBOX
+------------------------------ */
 .loginbox {
   width: 60%;
   margin: auto;
@@ -572,6 +671,10 @@ Gallery Block
   text-decoration: none;
 }
 
+.MYU-pics img {
+  box-shadow: 4px 2px 15px -10px var(--charcoal);
+}
+
 .caption {
   padding: 1em;
   background: hsla(246, 40%, 30%, 0);
@@ -659,6 +762,10 @@ MEDIA QUERIES
     grid-gap: 1rem;
   }
 
+  .MYU-pics img {
+    box-shadow: 4px 8px 15px -7px var(--charcoal);
+  }
+
   .pics {
     display: grid;
   }
@@ -709,11 +816,6 @@ MEDIA QUERIES
       margin: 0;
       
     }
-
-    .MYU-pics img {
-      border: #000 solid 2px;
-    }
-
 
     #home-c .container {
       line-height: 2rem;
