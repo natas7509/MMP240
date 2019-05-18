@@ -116,7 +116,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
   }
 
   .topnav.responsive ul {
-    background-color: black;
+    background-color: var(--overlay-color);
   }
 
   .topnav.responsive .icon {
@@ -135,6 +135,12 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     color: #fff;
     /*If navigation button is off, fix padding here after styling text*/
     /* padding: 17.25px 17px; */
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 
   .topnav.responsive a {

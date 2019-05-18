@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="mobilenav_responsive.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Home | MYU</title>
+</head>
+
+<body>
+  <header id="header-home">
+    <div class="container">
+      <nav class="topnav" id="myTopnav">
+        <img src="img/logo.png" alt="MYU" id="logo">
+        <ul>
+          <li><a href="mainHome.html" class="current">Home</a>
+            <ul>
+              <li><a href="index.html">re-enter zip</a></li>
+              <li><a href="map.html">Map</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="dropburger"><a href="index.html">re-enter zip</a></li>
+          <li class="dropburger"><a href="map.html">Map</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
+      </nav>
+      <div class="header-content">
+        <h1>
+          Welcome 
+          <span class="txt-type" data-wait="3000"
+            data-words='[ "to your new club", "to a new style of football", "to Manhattan Youth United"]'></span>
+        </h1>
+        <p class="lead">
+          Join us as one of the most influential clubs in the nation.
+        </p>
+        <a href="index.html" class="btn-light">Sign Up Today</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section B: Stats -->
+  <section id="home-b" class="text-center py-2">
+    <div class="container">
+      <h2>MYU Cups</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">
+        Domestic and National Competitions
+      </p>
+      <div class="stats">
+        <div>
+          <ul>
+            <li><i class="fas fa-trophy fa-3x"></i></li>
+            <li class="stats-title">City Cup</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-trophy fa-3x"></i></li>
+            <li class="stats-title">State Cup</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-shield-alt fa-3x"></i></li>
+            <li class="stats-title">National Sheild</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-shield-alt  fa-3x"></i></li>
+            <li class="stats-title">Community Shield</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-trophy fa-3x"></i></li>
+            <li class="stats-title">West/East Trophy</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-trophy fa-3x"></i></li>
+            <li class="stats-title">U 16 Cup</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-trophy fa-3x"></i></li>
+            <li class="stats-title">U 14 Cup</li>
+
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-clipboard fa-3x"></i></li>
+            <li class="stats-title">Continental Trials</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section c: pics -->
+  <section id="home-c" class="text-center py-3">
+    <div class="container">
+      <h2>Gary Struthers</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">
+        The Man at the Helm
+      </p>
+      <img src="/img/president.jpg">
+    </div>
+    <div class="container">
+      <h2>MYU - Main</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">
+        Our New Flagship Stadium
+      </p>
+      <img src="/img/stadiumMain.jpg">
+    </div>
+  </section>
+
+
+  <!-- Join-->
+  <div class="container">
+    <div class="loginbox">
+      <form>
+        <!-- <p>Email</p> -->
+        <input type="text" name="" placeholder="Name">
+        <!-- <p>Password</p> -->
+        <input type="text" name="" placeholder="Enter Email">
+        <input type="submit" name="" value="JOIN">
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content container">
+      <p>Copyright &copy; 2019. All Rights Reserved</p>
+      <div class="social">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <script src="js/typewriter.js"></script>
+</body>
+
+</html>
