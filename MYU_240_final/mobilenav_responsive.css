@@ -22,6 +22,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
+  
 }
 
 .topnav ul {
