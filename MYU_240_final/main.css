@@ -42,7 +42,7 @@
   max-width: 60%;
   margin: auto;
   border: #fff solid 2px;
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
 }
 
 .btn-main,
@@ -285,12 +285,6 @@ img {
   width: 70px;
   height: 70px;
   color: #fff;
-  
-
-  
-
-  /* text-transform: uppercase; */
-
 }
 
 #header-home {
@@ -389,9 +383,8 @@ img {
   grid-template-columns: 1fr;
   grid-gap: 1.2rem;
 }
- #coaching-a h3 {
-     
-} 
+
+#coaching-a h3 {}
 
 #coaching-a .coach {
   grid-area: coach;
@@ -428,13 +421,14 @@ img {
 
 #coaching-b .process {
   display: grid;
-  grid-template-columns:   1fr;
-  
+  grid-template-columns: 1fr;
+
 }
+
 #coaching-b .staff {
- 
-   border: #000 1px solid;
-   padding: 1rem 2rem;
+
+  border: #000 1px solid;
+  padding: 1rem 2rem;
 }
 
 #coaching-b .container li {
@@ -444,7 +438,7 @@ img {
 
 #home-c img {
   margin: auto;
-  
+
 }
 
 
@@ -461,6 +455,7 @@ ZIP - LOGINBOX
 
 #header-zip h2 {
   color: #fff;
+  padding-bottom: 2rem;
 }
 
 #header-zip .header-content {
@@ -487,7 +482,7 @@ MAP
 .zip-loginbox {
   width: 60%;
   margin: auto;
-  padding: 3rem 0;
+  padding-bottom: 2rem;
   font-size: 0.9em;
 }
 
@@ -571,16 +566,16 @@ input[type="name"] {
   border: none;
   outline: none;
   height: 2rem;
-  background: var(--gold-text);
+  background: var(--hover-red);
+  
   font-size: 0.9em;
   border-radius: 7px;
-  color: #000;
+  color: #fff;
 }
 
 .loginbox input[type="submit"]:hover {
   cursor: pointer;
-  background: var(--hover-red);
-  border: #b0a08e 1px solid;
+  background: var(--charcoal);
   color: #fff;
 }
 
@@ -643,8 +638,8 @@ input[type="name"] {
   color: var(--hover-red);
   align-content: center;
   justify-content: center;
- 
-  
+
+
 }
 
 #about-d .story ul {
@@ -677,7 +672,7 @@ Gallery Block
   text-decoration: none;
 }
 
-.main-gallery .MYU-pics  {
+.main-gallery .MYU-pics {
   padding: 0;
 }
 
@@ -839,15 +834,15 @@ MEDIA QUERIES
 
   #home-c .process .staff {
     display: grid;
-    grid-template-columns:  1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr;
+
   }
-  
+
   #home-c .container li {
     line-height: 2rem;
     text-align: center;
   }
-  
+
   #home-c img {
     margin: auto;
   }
@@ -875,22 +870,57 @@ MEDIA QUERIES
 
   #coaching-b .process {
     display: grid;
-    grid-template-columns:   1fr 1fr;
-     /* border: #b0a08e 4px solid; */
+    grid-template-columns: 1fr 1fr;
+    /* border: #b0a08e 4px solid; */
   }
+
   /* #coaching-b .staff {
    
      border: #000 1px solid;
      padding: 1rem 2rem;
   } */
-  
+
   #coaching-b .container li {
     line-height: 2rem;
     text-align: center;
   }
 
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    align-items: center;
+  }
 
+  #main-footer {
+    background: var(--charcoal);
+    color: #fff;
+    height: 5rem;
+  }
 
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    align-items: center;
+  }
+
+  #main-footer .footer-content .social .fab {
+    float: left;
+    margin-right: 2rem;
+    border: 1px solid var(--sky);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1rem;
+  }
+
+  #main-footer .footer-content .social .fab:hover {
+    background: var(--hover-red);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -914,7 +944,7 @@ MEDIA QUERIES
     overflow: hidden;
   }
 
-  
+
 
   #home-c {
     /* background-color: red; */
@@ -941,7 +971,7 @@ MEDIA QUERIES
   #coaching-b .staff {
     padding: 3rem;
     text-align: justify;
-     /* background-color: red; */
+    /* background-color: red; */
   }
 
   .loginbox {
@@ -951,10 +981,5 @@ MEDIA QUERIES
     font-size: 0.9em;
   }
 
-  #main-footer .footer-content {
-    display: flex;
-    justify-content: space-around;
-    height: 5rem;
-    align-items: center;
-  }
+
 }
