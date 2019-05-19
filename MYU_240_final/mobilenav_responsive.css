@@ -154,11 +154,18 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     display: block;
     border-bottom: hidden;
     margin-top: 1rem;
+    color: #fff; 
+    margin-right: 1rem;
+    padding: 0;
+  }
+
+  #header-home .topnav a.icon {
+    padding: 0;
   }
 
   .topnav.responsive li {
     position: relative;
-    margin: 1rem 1rem;
+    margin: 1rem 5rem;
     padding: 0 1rem;
   }
 
@@ -171,15 +178,21 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     right: 0;
     top: 0;
     /*If navigation button is off, fix padding here after styling text*/
-    padding: 17.25px 24px;
+    padding: 8px 8px;
 
   }
+ 
+  #header-home .icon {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+  } 
 
   .topnav a.icon {
-    display: block;
+    /* display: block;
     height: auto;
     width: auto;
-    color: #fff;
+    color: #fff; */
     /*If navigation button is off, fix padding here after styling text*/
     /* padding: 17.25px 17px; */
   }
@@ -190,11 +203,11 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     text-align: left;
   }
 
-  .topnav.responsive a {
+  /* .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
-  }
+  } */
 
 
 

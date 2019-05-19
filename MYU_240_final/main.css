@@ -309,11 +309,11 @@ img {
   line-height: 1.2;
 }
 
-#header-inner {
+/* #header-inner {
   background: url("img/Header-1.jpg") no-repeat 20% 10%/cover;
   height: 5.5rem;
   border-bottom: 2px solid var(--hover-red);
-}
+} */
 
 
 #home-b .stats {
@@ -356,8 +356,6 @@ img {
   grid-template-columns: 1fr;
   grid-gap: 1.2rem;
 }
-
-#coaching-a h3 {}
 
 #coaching-a .coach {
   grid-area: coach;
