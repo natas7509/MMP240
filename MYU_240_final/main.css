@@ -339,7 +339,7 @@ img {
 }
 
 #header-inner {
-  background: url("/img/Header-1.jpg") no-repeat 20% 10%/cover;
+  background: url("img/Header-1.jpg") no-repeat 20% 10%/cover;
   height: 5.5rem;
   border-bottom: 2px solid var(--hover-red);
 }
@@ -440,7 +440,9 @@ img {
 
 #home-c img {
   margin: auto;
+  
 }
+
 
 
 /* ------------------------------
@@ -669,6 +671,10 @@ Gallery Block
   display: block;
   margin-bottom: 1rem;
   text-decoration: none;
+}
+
+.main-gallery .MYU-pics  {
+  padding: 0;
 }
 
 .MYU-pics img {
