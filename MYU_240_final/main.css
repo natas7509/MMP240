@@ -88,7 +88,7 @@ input[class^='btn-']:hover {
 }
 
 .bg-light {
-  background: #f4f4f4;
+  background: var(--sky);
   color: #000;
 }
 
@@ -118,9 +118,9 @@ input[class^='btn-']:hover {
   padding: 3rem 0;
 }
 
-.py-4 {
+/* .py-4 {
   padding: 4rem 0;
-}
+} */
 
 .my-1 {
   margin: 1rem 0;
@@ -350,6 +350,10 @@ img {
   grid-template-columns: 1fr;
 }
 
+#home-b .stats ul {
+  padding: 0;
+}
+
 #home-b .stats li {
   line-height: 2;
 }
@@ -372,24 +376,28 @@ img {
   background: var(--sky);
 }
 
-/* animation for sec C Testimonials - Coaching Page */
+/* coaching PAGE---------------------------------
+-------------------------------------------- */
 
-#home-c .process-step {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 28px;
-  background: red;
-  color: #fff;
-  border-radius: 50%;
-  height: 15px;
-  width: 15px;
-  line-height: 15px;
-  padding: 1rem;
-  transition: all 1s;
+#coaching-a .coaching-info ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.2rem;
+}
+ #coaching-a h3 {
+     
+} 
+
+#coaching-a .coach {
+  grid-area: coach;
+  border-left: 3px solid var(--hover-red);
+  padding: 7rem 0.8rem;
 }
 
-#home-c .process-icon {
+/* animation for sec b Testimonials - Coaching Page */
+
+#coaching-b .process-icon {
   border-radius: 50%;
   background: #333;
   color: #fff;
@@ -402,24 +410,30 @@ img {
   transition: all 1s;
 }
 
-#home-c .process-icon:hover {
+#coaching-b .process-icon:hover {
   background: red;
   width: 90px;
   height: 90px;
   line-height: 90px;
 }
 
-#home-c .process-icon:hover .process-step {
-  background: #333;
-  color: #fff;
-}
-
-#home-c .container {
+#coaching-b .container {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-#home-c .container li {
+#coaching-b .process {
+  display: grid;
+  grid-template-columns:   1fr;
+  
+}
+#coaching-b .staff {
+ 
+   border: #000 1px solid;
+   padding: 1rem 2rem;
+}
+
+#coaching-b .container li {
   line-height: 2rem;
   text-align: center;
 }
@@ -618,8 +632,13 @@ input[type="name"] {
 }
 
 #about-d .story .far {
-  padding: 0 1rem;
+  display: flex;
+  /* padding: 0 1rem; */
   color: var(--hover-red);
+  align-content: center;
+  justify-content: center;
+ 
+  
 }
 
 #about-d .story ul {
@@ -627,29 +646,20 @@ input[type="name"] {
   list-style: none;
   margin-top: 1rem;
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 #about-d .story p {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
-/* coaching PAGE---------------------------------
--------------------------------------------- */
 
-#coaching-a .coaching-info ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1.2rem;
-}
-
-#coaching-a .coach {
-  grid-area: coach;
-  border-left: 3px solid var(--hover-red);
-  padding: 7rem 0.8rem;
-}
 
 /*-------------------------------------------------------------
 Gallery Block
@@ -817,10 +827,19 @@ MEDIA QUERIES
     opacity: 1;
   }
 
-  #coaching-a .coaching-info ul {
+  #home-c .process .staff {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1.2rem;
+    grid-template-columns:  1fr 1fr;
+    
+  }
+  
+  #home-c .container li {
+    line-height: 2rem;
+    text-align: center;
+  }
+  
+  #home-c img {
+    margin: auto;
   }
 
   .loginbox {
@@ -828,6 +847,36 @@ MEDIA QUERIES
     margin: auto;
     padding: 4em 0;
     font-size: 0.9em;
+  }
+
+  #coaching-a .container {
+    max-width: 1200px;
+  }
+
+  #coaching-a li {
+    font-size: 1.2rem;
+  }
+
+  #coaching-a .coaching-info ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+  }
+
+  #coaching-b .process {
+    display: grid;
+    grid-template-columns:   1fr 1fr;
+     /* border: #b0a08e 4px solid; */
+  }
+  /* #coaching-b .staff {
+   
+     border: #000 1px solid;
+     padding: 1rem 2rem;
+  } */
+  
+  #coaching-b .container li {
+    line-height: 2rem;
+    text-align: center;
   }
 
 
@@ -855,6 +904,8 @@ MEDIA QUERIES
     overflow: hidden;
   }
 
+  
+
   #home-c {
     /* background-color: red; */
     max-width: 1400px;
@@ -863,16 +914,24 @@ MEDIA QUERIES
     overflow: hidden;
   }
 
-  #home-c .process {
+  #coaching-a li {
+    font-size: 1.3rem;
+  }
+
+  #coaching-b .container {
+    max-width: 1200px;
+  }
+
+  #coaching-b .process {
     /* background-color: red; */
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  #home-c .staff {
-    /* border: #000 solid 2px; */
-    padding: 5rem;
+  #coaching-b .staff {
+    padding: 3rem;
     text-align: justify;
+     /* background-color: red; */
   }
 
   .loginbox {
