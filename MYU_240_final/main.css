@@ -659,15 +659,14 @@ Gallery Block
   transition: all 0.4s;
   /* opacity: 0; */
   background: var(--hover-red);
-  opacity: 1;
+  /* opacity: 1; */
 }
 
-a:focus .caption,
+/* a:focus .caption,
 a:hover .caption {
-  /* background: var(--overlay-color); */
-  background: var(--hover-red);
-  opacity: 0;
-}
+  background: var(--overlay-color);
+  opacity: 1;
+} */
 
 .caption-title {
   margin: 0;
