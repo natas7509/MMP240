@@ -6,7 +6,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 /* MYU Pallet */
 :root {
   --hover-red: rgb(234, 25, 25);
-  --charcoal: rgb(67, 62, 73);
+  --charcoal: rgba(19, 17, 17, 1);
   --sky: rgb(177, 221, 241);
   --skyOpacity: rgba(177, 221, 241, 0.45);
   --green: rgb(68, 175, 105);
@@ -24,42 +24,12 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
   background-color:transparent;
 }
 
-/* ---------start drop-down from mainHome------------- */
-/* #header-home .container ul li ul li a {
-  color: #fff;
-  text-transform: lowercase;
-}
-
-#header-home .container ul li ul {
-  color: rgb(100, 129, 100);
-  padding: 0;
-  margin: 0;
-}
-
-#header-home .container ul li ul li {
-  margin: 2rem 0;
-}
-
- #header-inner .container ul li ul li a {
-  color: red;
-  text-transform: lowercase;
-} 
-
- #header-inner .container ul li ul {
-  color: rgb(100, 129, 100);
-  padding: 0;
-  margin: 0;
-}  
-
- #header-inner .container ul li ul li {
-  margin: 2rem 0;
-}  */
-
 .topnav {
   display: flex;
   justify-content: space-between;
   background-color: var(--charcoal);
   /* padding-top: 3rem; */
+  /* height: 5rem; */
   
 }
 
@@ -134,6 +104,12 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 
 @media screen and (max-width: 600px) {
 
+  /* .topnav.responsive{
+    background-color: aquamarine;
+
+  } */
+
+  
   .topnav a {
     display: none;
 
@@ -170,7 +146,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
   }
 
   .topnav.responsive ul {
-    background-color: var(--overlay-color);
+    background-color: transparent;
   }
 
   .topnav.responsive .icon {
@@ -184,18 +160,9 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
  
   #header-home .icon {
     position: absolute;
-    right: .5rem;
-    top: .5rem;
+    right:.5rem;
+    top:.5rem;
   } 
-
-  .topnav a.icon {
-    /* display: block;
-    height: auto;
-    width: auto;
-    color: #fff; */
-    /*If navigation button is off, fix padding here after styling text*/
-    /* padding: 17.25px 17px; */
-  }
 
   .topnav.responsive a {
     float: none;
@@ -203,24 +170,11 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     text-align: left;
   }
 
-  /* .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  } */
-
-
 
   /*----------------------------------------
    drop-down nav from HOME 
   ----------------------------------------*/
-  /* .topnav ul li ul li a{
-    display: none;
-  }
-  .topnav ul li ul:hover li a{
-    display: none;
-  } */
-
+  
   .topnav ul:hover li ul {
     display: none;
   }

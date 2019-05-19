@@ -17,7 +17,7 @@
 /* MYU Pallet */
 :root {
   --hover-red: rgb(234, 25, 25);
-  --charcoal: rgb(67, 62, 73);
+  --charcoal: rgba(19, 17, 17, 1);
   --sky: rgb(177, 221, 241);
   --green: rgb(68, 175, 105);
   --rust: rgb(209, 122, 34);
