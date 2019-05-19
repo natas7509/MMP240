@@ -8,30 +8,70 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
   --hover-red: rgb(234, 25, 25);
   --charcoal: rgb(67, 62, 73);
   --sky: rgb(177, 221, 241);
+  --skyOpacity: rgba(177, 221, 241, 0.45);
   --green: rgb(68, 175, 105);
   --rust: rgb(209, 122, 34);
   --overlay-color: rgba(20, 7, 13, 0.35);
   --opacity: hsla(246, 40%, 30%, 0);
 }
 
+
 .topnav .dropburger {
   display: none;
 }
 
+#header-home .topnav {
+  background-color:transparent;
+}
+
+/* ---------start drop-down from mainHome------------- */
+/* #header-home .container ul li ul li a {
+  color: #fff;
+  text-transform: lowercase;
+}
+
+#header-home .container ul li ul {
+  color: rgb(100, 129, 100);
+  padding: 0;
+  margin: 0;
+}
+
+#header-home .container ul li ul li {
+  margin: 2rem 0;
+}
+
+ #header-inner .container ul li ul li a {
+  color: red;
+  text-transform: lowercase;
+} 
+
+ #header-inner .container ul li ul {
+  color: rgb(100, 129, 100);
+  padding: 0;
+  margin: 0;
+}  
+
+ #header-inner .container ul li ul li {
+  margin: 2rem 0;
+}  */
+
 .topnav {
   display: flex;
   justify-content: space-between;
+  background-color: var(--charcoal);
   /* padding-top: 3rem; */
   
 }
 
 .topnav ul {
   display: flex;
+  /* border: #fff solid 2px; */
 }
 
 .topnav ul li {
   padding: 1rem 1.5rem;
   position: relative;
+  /* border: #fff solid 2px; */
 }
 
 .topnav ul li a {
@@ -47,27 +87,33 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 .topnav ul li ul {
   display: none;
   position: absolute;
-  /* background-color: blue; */
+  background-color: var(--skyOpacity);
   padding: 0;
   float: left;
   margin: 0;
+  color: rgb(100, 129, 100);
+  padding: 0;
+  
 }
 
 .topnav ul:hover li ul {
   display: block;
+  
 }
 
 .topnav ul li ul li {
   padding: .5rem 0;
-  width: 120px;
+  width: 100px;
+}
+
+.topnav ul li ul li a:hover {
+  color: #fff;
 }
 
 .topnav ul li ul li a {
   border-bottom: none;
-}
-
-.topnav ul li ul li a:hover {
-  color: #888;
+  color: var(--charcoal);
+  text-transform: lowercase;
 }
 
 .topnav a:hover {
@@ -149,6 +195,8 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
     display: block;
     text-align: left;
   }
+
+
 
   /*----------------------------------------
    drop-down nav from HOME 

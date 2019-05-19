@@ -10,6 +10,8 @@
   Photo by Thomas Chauke from Pexels
   Photo by Zac Frith from Pexels
   Photo by Serkan Göktay from Pexels
+  logo design by pngtree.com and Jon Darling
+  Photo by Dellon Thomas from Pexels
 */
 
 /* MYU Pallet */
@@ -298,36 +300,7 @@ img {
   padding-top: 20%;
 }
 
-/* ---------start drop-down from mainHome------------- */
-#header-home .container ul li ul li a {
-  color: #fff;
-  text-transform: lowercase;
-}
-
-#header-home .container ul li ul {
-  color: rgb(100, 129, 100);
-  padding: 0;
-  margin: 0;
-}
-
-#header-home .container ul li ul li {
-  margin: 2rem 0;
-}
-
-#header-inner .container ul li ul li a {
-  color: red;
-  text-transform: lowercase;
-}
-
-#header-inner .container ul li ul {
-  color: rgb(100, 129, 100);
-  padding: 0;
-  margin: 0;
-}
-
-#header-inner .container ul li ul li {
-  margin: 2rem 0;
-}
+ 
 
 /* ------end-drop-down from mainHome------- */
 
