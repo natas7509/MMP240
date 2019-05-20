@@ -14,9 +14,11 @@
   Photo by Dellon Thomas from Pexels
 */
 
-/* *{
+/*
+ *{
   box-sizing: border-box;
-} */
+} 
+*/
 
 /* MYU Pallet */
 :root {
@@ -382,41 +384,26 @@ img {
   line-height: 90px;
 }
 
-#coaching-b .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  
-}
-
-#coaching-b .process {
-  display: grid;
-  grid-template-columns: 1fr;
-  
-
-}
-
 #coaching-b .staff {
 
-/*  border: #000 1px solid;*/
+  border: #000 1px solid;
   padding: 1rem 2rem;
-/*margin:0;*/
-  
-  
-  
-  
 }
 
 #coaching-b .container li {
   line-height: 2rem;
   text-align: center;
+    
+}
+
+#coaching-b .container h2 {
+    text-align: center;  
 }
 
 #home-c img {
   margin: auto;
 
 }
-
-
 
 /* ------------------------------
 ZIP - LOGINBOX
@@ -886,6 +873,7 @@ MEDIA QUERIES
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+
   }
 
   #home-c .container li {
@@ -921,14 +909,14 @@ MEDIA QUERIES
   #coaching-b .process {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* border: #b0a08e 4px solid; */
+/*     border: #b0a08e 4px solid; */
   }
 
   #coaching-b .container li {
     line-height: 2rem;
-    text-align: center;
+    text-align: center; 
   }
-
+  
   .wrapper{
     display: grid;
     grid-template-columns: 1fr 2fr;
