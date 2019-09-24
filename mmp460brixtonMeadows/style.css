@@ -366,10 +366,21 @@ main {
 
 /*Vendor-css*/
 
+.vender-banner h1{
+    font-size: 3rem;
+     padding-bottom: 1rem;
+     
+}
+.vender-banner img{
+    width: 300px;
+    margin-bottom: 25px;;
+}
+
 .content {
     position: relative;
     background: white;
-    margin-bottom: 25px;
+/*    margin-top: 1rem;*/
+  
     overflow: hidden; }
 .content article {
     padding: 100px 0;
@@ -377,6 +388,7 @@ main {
     margin: 0 auto;
     text-align: center; }
 .content article h1{
+    margin-bottom: 25px;
     color:#012121;
     font-weight: 400;
 }
@@ -387,7 +399,7 @@ main {
 
     padding-bottom: 3rem;
     max-width: 640px;
-    margin: 0 auto;
+    margin:  auto;
     text-align: center;
 
 }

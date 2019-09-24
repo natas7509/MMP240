@@ -2,7 +2,7 @@ $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
 
   // Landing Elements
-  if (wScroll > $(".vendor-pics").offset().top - $(window).height() / 0.9) {
+  if (wScroll > $(".vendor-pics").offset().top - $(window).height() / 0.8) {
     $(".vendor-pics figure").each(function(i) {
       setTimeout(function() {
         $(".vendor-pics figure")
