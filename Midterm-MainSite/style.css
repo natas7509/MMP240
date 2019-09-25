@@ -9,8 +9,7 @@ body {
 
     /*    font-family: 'Raleway', sans-serif;*/
     color: #012121;
-
-
+    
 }
 
 p {
@@ -20,14 +19,16 @@ p {
 
 .navbar {
     padding: .8rem;
-
+    
 }
 
 .navbar-nav li {
     padding-right: 100px;
+    
 }
 .nav-link {
     font-size: 1.3em !important;
+    
 }
 
 
@@ -36,6 +37,7 @@ p {
     width: 100%;
     height: 100%;
     margin-top: -300px;
+    
 
 }
 .carousel-caption {
@@ -106,14 +108,21 @@ hr.light-100 {
     margin-top: 2rem;
 }
 
+.navbar>.container-fluid {
+    background-color: #f3f2f2;
+    
+}
+
 .container-fluid-padding {
     padding: 3rem;
     margin-top: 2rem
+    
 
 }
 .social a {
     font-size: 1.5em;
     padding: 1rem;
+    
 
 }
 
@@ -363,7 +372,7 @@ h1 {
     font-weight: 400; }
 
 figure {
-    margin: auto; 
+    margin-top: -2px; 
 
 }
 
@@ -372,6 +381,10 @@ figure {
 
 
 /*Vendor-css*/
+
+#ramsay {
+    margin-bottom: 2rem;
+}
 
 .content {
     position: relative;
@@ -386,6 +399,7 @@ figure {
 .content article h1{
     color:#012121;
     font-weight: 400;
+   
 }
 .heading h1 {
     color:#012121;
@@ -406,7 +420,7 @@ img {
 
 
 .vendor-pics {
-    margin-bottom: 100px; }
+    margin-bottom: 2rem; }
 .vendor-pics figure {
     margin-bottom: 20px;
     position: relative;
@@ -489,9 +503,27 @@ img {
     background: white;
     color: black; }
 
+.r-history h1 {
+/*    border: 2px solid #000;*/
+   padding-bottom: 1rem
+}
+
+.r-history p {
+/*    border: 2px solid #000;*/
+}
+
+.r-history{
+/*    border: 2px solid #000;*/
+    margin-bottom: -80px;
+}
+
 .map-hero {
 
-    padding-bottom: 10rem;
+    padding-bottom: 2rem;
+}
+
+.heading h1 {
+/*    margin-top: -50px*/
 }
 
 
@@ -654,7 +686,7 @@ img {
 
     .navbar {
         padding: .8rem;
-
+      
     }
 
     .navbar-nav li {
