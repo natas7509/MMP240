@@ -13,6 +13,11 @@ body {
 
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
     padding: .8rem;
 
@@ -30,6 +35,7 @@ body {
 .carousel-inner img {
     width: 100%;
     height: 100%;
+    margin-top: -300px;
 
 }
 .carousel-caption {
@@ -67,7 +73,7 @@ body {
 
 }
 .col-lg-6 p {
-    padding-top: 10rem;
+    padding-top: 2rem;
 
 
 }
@@ -102,6 +108,7 @@ hr.light-100 {
 
 .container-fluid-padding {
     padding: 3rem;
+    margin-top: 2rem
 
 }
 .social a {
@@ -158,12 +165,16 @@ footer {
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    margin: 0 -16px;
+    margin:3rem 0;
+/*    min-width: 1000px;*/
+
 }
 
 .col-25 {
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
+    margin:3rem 0;
+   
 }
 
 .col-50 {
@@ -286,12 +297,6 @@ span.price {
     float: right;
     color: grey;
 }
-
-
-
-
-
-
 
 
 
@@ -507,6 +512,7 @@ img {
 
     .artist-hero {
         height: 100vh;
+        margin-top: 0;
 
     }
 
@@ -577,6 +583,12 @@ img {
 /*576px-and-under*/
 
 @media (max-width: 576px) {
+    
+        .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    margin: 60px 0 0;
+}
 
     .vendor-pics figcaption {
         position: absolute;
@@ -594,7 +606,7 @@ img {
 
     }
     .col-lg-6 p {
-        padding-top: 8rem;
+        padding-top: 1rem;
     }
 
     .carousel-caption h1 {
@@ -637,6 +649,8 @@ img {
 
 /*Large (lg) devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
+    
+ 
 
     .navbar {
         padding: .8rem;
@@ -652,6 +666,8 @@ img {
 
 }
 @media (max-width: 320px){
+    
+   
 
     .carousel-caption h1 {
         top: 20%;
