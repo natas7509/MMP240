@@ -382,20 +382,25 @@ span.price {
     background-size: cover;
     background-position: center;
     padding: 3em 0;
+   
 
 }
 
 .artist-textbox-container {
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    top: 40%;
+    position: absolute;
+
 }
 
 .artist-textbox {
     grid-column: 1/2;
     grid-row: 2/3;
     color: #FDE5E0;
-    padding: 2rem;
+    padding: 3rem;
+      border: solid 1px #fff;
     margin-left: 3rem;
 
 }
@@ -650,20 +655,41 @@ img {
 
 @media (max-width: 768px) {
     
-    .artist-textbox-container {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        
-/*        background: #fff;*/
-        overflow:hidden; 
+    .artist-hero {
+        margin: 0;
     }
     
+   .artist-textbox-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.artist-textbox {
+    color: #FDE5E0;
+    padding: 2rem;
+    margin: 3rem;
 
 }
+
+.artist-textbox h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.7rem;
+    padding: 2rem;
+}
+
 
 
 /* For devices larger than 576px */
 @media (min-width: 576px) {
+    
+    .artist-textbox {
+    color: #FDE5E0;
+    padding: 2rem;
+    margin: 3rem;
+}
+    
     .container {
         width: 80%;
     }
@@ -691,6 +717,31 @@ img {
 /*576px-and-under*/
 
 @media (max-width: 576px) {
+    
+    .artist-textbox-container {
+        display: grid;
+        grid-template-columns: 1fr;
+/*        width: 100%;*/
+    }
+    
+    .artist-textbox {
+    grid-column: 1;
+    color: #FDE5E0;
+    padding: 2rem;
+    margin: 1rem;
+}
+    .artist-textbox h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 1rem;
+}
+    .artist-textbox p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .5rem;
+}
 
     
         .carousel-inner img {
@@ -790,7 +841,8 @@ img {
 
 
 @media (max-width: 320px) {
-
+    
+   
 
 
 
