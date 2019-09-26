@@ -329,7 +329,7 @@ span.price {
 
 
 .artist-hero {
-
+    
     background-image: url(img/womanFacePaint);
     background-size: cover;
     background-position: center;
@@ -337,23 +337,27 @@ span.price {
 
 }
 
-
+.artist-textbox-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
 
 .artist-textbox {
-
+    grid-column: 1/2;
+    grid-row: 2/3;
     color: #FDE5E0;
     padding: 2rem;
-
     margin-left: 3rem;
-    width:  30vw;
-    /*    outline: 2px solid #FDE5E0;*/
+/*    width:  30vw;*/
+    outline: 2px solid #FDE5E0;
 
 }
 .artist-textbox h1 {
-
+    text-align: center;
     font-weight: 300;
     font-size: 3rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 
@@ -544,16 +548,27 @@ img {
 
 
 @media (max-width: 768px) {
+    
+    .artist-textbox-container {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        
+/*        background: #fff;*/
+        overflow:hidden; 
+    }
+    
+
 
     .artist-textbox {
+        
         color: #FDE5E0;
         padding: 1rem;
-
-        margin-left: 3rem;
-        width:  80vw;
-        /*        outline: 2px solid #FDE5E0;*/
-
+        border: 1px solid #777;
+        margin: 0 3rem;
+        width:  100vw;
+        
     }
+
 }
 
 
@@ -583,6 +598,16 @@ img {
 /*576px-and-under*/
 
 @media (max-width: 576px) {
+    
+      .artist-textbox {
+        
+        color: #FDE5E0;
+        padding: 1rem;
+        border: 1px solid #777;
+        margin: 0 3rem;
+        width:  100vw;
+        
+    }
     
         .carousel-inner img {
     width: 100%;
@@ -667,7 +692,20 @@ img {
 }
 @media (max-width: 320px){
     
-   
+/*
+     .artist-textbox-container {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         
+    }
+    .artist-textbox {
+        grid-column: 1/2;
+        background: #fff;
+        width: 100vh;
+    }
+        
+*/
+    
 
     .carousel-caption h1 {
         top: 20%;
