@@ -25,11 +25,17 @@
         font-size: 1.3em !important;
     }
 
+    #slides {
+        max-width: 1400px;
+        /* height: 100vh; */
+        margin: 0 auto;
+        /* border: #bb0000 2px solid; */
+    }
+
+
     .carousel-inner img {
         width: 100%;
-        /* background-size: contain; */
-        /* height: 100%; */
-        margin-top: -240px;
+        /* margin-top: -240px; */
     }
 
     .carousel-caption {
