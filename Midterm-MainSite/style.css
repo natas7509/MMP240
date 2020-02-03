@@ -54,6 +54,10 @@
         margin-left: 129px;
     }
 
+    .btn {
+        margin-bottom: 1rem;
+    }
+
     .red {
         color: #FF2700;
     }
@@ -95,14 +99,6 @@
     .artist-base {
         border-color: #707070;
         width: 97%;
-    }
-
-    .btn {
-        float: right;
-        position: relative;
-        z-index: 5;
-        margin-right: 30px;
-        margin-top: 2rem;
     }
 
     .navbar>.container-fluid {
