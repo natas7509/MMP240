@@ -4,7 +4,7 @@
     margin: 100px auto;
     overflow: hidden;
     padding: 25px;
-    color: #4c4e56;
+    color: #012121;
 }
 
 .creditCardForm label {
@@ -12,9 +12,10 @@
     margin-bottom: 10px;
 }
 
-.creditCardForm .heading h1 {
+.creditCardForm .heading h1,
+h3 {
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'poppins', sans-serif;
     color: #4c4e56;
 }
 
@@ -25,6 +26,11 @@
     margin-top: 20px;
     position: relative;
 }
+
+.creditCardForm .payment p {
+    margin-bottom: 1rem;
+}
+
 
 .creditCardForm .payment .form-group {
     float: left;
