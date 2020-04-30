@@ -1,12 +1,13 @@
 /*My-Artists-Page-effect*/
 
-$(window).scroll(function() {
-   artists();
-    function artists() {
+$(window).scroll(function () {
+  artists();
+  function artists() {
     var wScroll = $(window).scrollTop();
-    
-    $('.parallax--bg').css('background-position' , 'center '+(wScroll*.8) +'px')
 
-}
-
+    $(".parallax--bg").css(
+      "background-position",
+      "center " + wScroll * 0.8 + "px"
+    );
+  }
 });
